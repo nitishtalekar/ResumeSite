@@ -1,0 +1,825 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>NtishTalekar</title>
+    <meta name="description" content="Creative portfolio template. Fully responsive with cool animations">
+    <meta name="keywords" content="agency, bootstrap, business, company, corporate, creative, clean, modern, multipurpose, onepage, personal, portfolio, professional, responsive, minimal">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon.png')}}">
+
+    <!-- Web fonts/Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/opensans/stylesheet.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/ionicons/ionicons.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/fontawesome/font-awesome.min.css')}}">
+
+    <!-- Vendor CSS -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/lib/swiper.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/lib/jquery.fullpage.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/lib/vegas/vegas.min.css')}}">
+
+    <!-- Main CSS files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    
+    <script type="text/javascript">
+    $(document).ready(function() {
+        console.log( "NitishPravinTalekar");
+        $("#experiance-title").css('opacity', '1');
+    });
+    $(document).on('click', '#exp-toggle', function () {
+      $("#exp-panel").slideToggle();
+      $("#exp-panel1").slideToggle();
+      $("#exp-toggle").toggleClass("fa-chevron-down");
+      $("#exp-toggle").toggleClass("fa-chevron-up");
+    });
+    $(document).on('click', '#expedu-toggle', function () {
+        $("#exp-slide").toggle('slide');
+        $("#edu-slide").toggle('slide');
+    });
+    $(document).on('click', '#education-title', function () {
+      $("#exp-slide").fadeOut("fast",function(){
+        $("#skill-slide").fadeOut("fast",function(){
+          $("#edu-slide").fadeIn("fast")
+        })
+      });
+      $("#exp-desc").fadeOut("fast",function(){
+        $("#skill-desc").fadeOut("fast",function(){
+          $("#edu-desc").fadeIn("fast")
+        })
+      });
+      $("#education-title").css('opacity', '1');
+      $("#experiance-title").css('opacity', '0.3');
+      $("#skills-title").css('opacity', '0.3');
+    });
+    $(document).on('click', '#experiance-title', function () {
+      $("#edu-slide").fadeOut("fast",function(){
+        $("#skill-slide").fadeOut("fast",function(){
+          $("#exp-slide").fadeIn("fast");
+        })
+      });
+      $("#edu-desc").fadeOut("fast",function(){
+        $("#skill-desc").fadeOut("fast",function(){
+          $("#exp-desc").fadeIn("fast");
+        })
+      });
+      $("#education-title").css('opacity', '0.3');
+      $("#experiance-title").css('opacity', '1');
+      $("#skills-title").css('opacity', '0.3');
+    });
+    $(document).on('click', '#skills-title', function () {
+      $("#exp-slide").fadeOut("fast",function(){
+        $("#edu-slide").fadeOut("fast",function(){
+          $("#skill-slide").fadeIn("fast");
+        })
+      });
+      $("#exp-desc").fadeOut("fast",function(){
+        $("#edu-desc").fadeOut("fast",function(){
+          $("#skill-desc").fadeIn("fast");
+        })
+      });
+      $("#education-title").css('opacity', '0.3');
+      $("#experiance-title").css('opacity', '0.3');
+      $("#skills-title").css('opacity', '1');
+    });
+    $(document).on('click', '.carousel-next', function () {
+      var index = $(this).parent().children(".carousel-index").text();
+      index2 = (parseInt(index)+1)%2;
+      var id = $(this).parent().children(".carousel-name").text();
+      if($("#"+id+"_"+index2).length){
+        $("#"+id+"_"+index).fadeOut("fast",function(){
+          $("#"+id+"_"+index2).fadeIn("fast")
+        });
+        $(this).parent().children(".carousel-index").text(index2)
+      }
+      else{
+        return
+      }
+    });
+    
+    $(document).on('click', '.artwork', function () {
+      // console.log("HELLO");
+      $("#artwork-name").text($(this).children(".art-name").text() + " - " + $(this).children(".art-date").text());
+      $("#artwork-img").attr("src",$(this).children(".art-src").text());
+      $("#artworkmodal").modal("show");
+    });
+    
+    $(document).on('click', '.project', function () {
+      // console.log("HELLO");
+      $("#project-git").show();
+      $("#project-link").show()
+      $("#project-name").text($(this).children().children().children(".proj-name").text());
+      $("#project-topic").text($(this).children().children().children(".proj-topic").text());
+      $("#project-timeline").text($(this).children().children(".proj-timeline").text());
+      $("#project-desc").text($(this).children().children(".proj-desc").text());
+      $("#project-lang").text($(this).children().children().children(".proj-lang").text());
+      $("#project-git").attr("href",$(this).children().children(".proj-git").text());
+      $("#project-link").attr("href",$(this).children().children(".proj-link").text());
+      if($(this).children().children(".proj-git").text() == ""){
+        $("#project-git").hide();
+      }
+      if($(this).children().children(".proj-link").text() == ""){
+        $("#project-link").hide();
+      }
+      $("#projectmodal").modal("show");
+    });
+    
+    </script>
+    
+    <style media="screen">
+      .info-hover{
+        opacity:0.3;
+      }
+      .info-hover:hover{
+        opacity:1;
+        cursor:pointer;
+      }
+      .carousel-next:hover{
+        cursor:pointer;
+      }
+      #exp-toggle:hover{
+        cursor:pointer;
+      }
+      .btn-link:hover{
+        opacity:0.5;
+        text-decoration: none;
+      }
+      .btn-link:visited{
+        text-decoration: none;
+      }
+      .nav-link{
+        text-decoration: none;
+      }
+      .nav-link:hover{
+        font-weight: bold;
+        text-decoration: none;
+        color: white !important;
+        transition: 0.5s;
+      }
+      .resume-btn:hover{
+        text-decoration: none !important;
+      }
+    </style>
+</head>
+
+<body id="menu" class="body-page">
+<!--[if lt IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Page Loader -->
+<div class="pageloader" id="pageloader">
+    <div>
+        <div class="icon ion-spin"></div>
+    </div>
+</div>
+
+<div class="modal fade" id="artworkmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark" style="width:100vw;background-color: rgb(29, 29, 29);">
+      <div class="modal-header">
+        <h5 class="modal-title text-uppercase" id="artwork-name"></h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex justify-content-center align-items-center">
+          <img class="img" id="artwork-img" src="" alt="Image" style="width:95%">
+      </div>
+      <div class="modal-footer d-flex justify-content-center align-items-center">
+        <button type="button" class="btn btn-secondary m-0" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="projectmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="width:100vw;background-color: rgb(29, 29, 29);">
+      <div class="modal-header">
+        <h5 class="modal-title text-uppercase" id="project-name"></h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="text-center mb-4">
+          <h4 class="text-uppercase" id="project-topic"></h4>
+        </div>  
+        <div class="text-center mb-4">
+          <h5 class="text-uppercase" id="project-timeline"></h5>
+        </div>    
+        <div class="text-center mb-4">
+          <h6 id="project-lang" class="mb-4"></h6>
+          <h6 id="project-desc"></h6>
+        </div> 
+        <div class="d-flex justify-content-around align-items-center mb-4">
+          <a href="" target="_blank" id="project-git" type="button" class="btn btn-secondary m-0 border border-light text-uppercase btn-link" style="background-color: rgb(29, 29, 29);">Github</a>
+          <a href="" target="_blank" id="project-link" type="button" class="btn btn-secondary m-0 border border-light text-uppercase btn-link" style="background-color: rgb(29, 29, 29);">Link</a>
+        </div>   
+      </div>
+      <div class="modal-footer d-flex justify-content-center align-items-center">
+        <button type="button" class="btn btn-secondary m-0" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Start Header -->
+<header class="page-header navbar page-header-alpha scrolled-white menu-right topmenu-right">
+    <button class="navbar-toggler site-menu-icon" id="navMenuIcon">
+        <span class="menu-icon menu-icon-random">
+        <span class="bars">
+          <span class="bar1"></span>
+          <span class="bar2"></span>
+          <span class="bar3"></span>
+        </span>
+      </span>
+    </button>
+
+    <a class="navbar-brand" href="#home">
+      <span class="logo">
+        <img class="light-logo" src="{{ url_for('static', filename='img/logo-white.png')}}" alt="Logo">
+      </span>
+    </a>
+
+    <div class="all-menu-wrapper" id="navbarMenu">
+        <nav class="navbar-mainmenu">
+            <ul class="navbar-nav mr-auto mr-auto-my">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">about</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#exp">experiance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#artwork">artwork</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="navbar-sidebar ">
+            <ul class="social">
+                <li>
+                    <a href="{{data.links.github}}" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{data.links.linkedin}}" target="_blank">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{data.links.facebook}}" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{data.links.instagram}}" target="_blank">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- End Header -->
+
+<!-- Start Cover -->
+<div class="page-cover">
+    <div class="cover-bg-mask bg-color" data-bgcolor="#1D1D1D" style="background-color: rgb(29, 29, 29);"></div>
+</div>
+<!--End Cover -->
+
+<!-- Start Content -->
+<main class="page-main page-fullpage main-anim" id="mainpage">
+    <!-- Start Home -->
+    <div class="section section-home fullscreen-md fp-auto-height-responsive main-home" data-section="home">
+        <div class="section-wrapper center-vh dir-col anim">
+            <div class="section-content reduced text-center">
+                <div class="row">
+                    <div class="col-12 col-md-12 text-center">
+                        <div class="title-desc">
+                            <h2 class="display-6 display-title home-title anim-2">{{data.name}}</h2>
+                            <h4 class="anim-2 opacity-75">{{data.oneline}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="section-footer scrolldown">
+                <a class="down">
+                    <span class="icon"></span>
+                    <span class="txt">About Me</span>
+                </a>
+            </footer>
+        </div>
+    </div>
+    <!-- End Home -->
+
+    <!-- Start About -->
+    <div class="section section-description fp-auto-height-responsive about-section" data-section="about">
+        <div class="section-wrapper center-vh dir-col anim">
+            <div class="section-title text-center">
+                <h2 class="display-4 display-title anim-2 mb-32">About Me</h2>
+            </div>
+
+            <div class="section-content reduced">
+                <div class="row">
+                  <div class="col-12 col-md-12 mb-4">
+                    <div class="row d-flex justify-content-center align-ites-center">
+                      <div class="col-lg-5 col-sm-10 col-md-10 mt-2">
+                            <div class="images text-center">
+                                <div class="img-avatar-alpha">
+                                    <div class="img-1">
+                                            <img class="img" src="{{ url_for('static', filename=data.profile) }}" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                      </div>   
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 text-left">
+                      <div class="title-desc pr-4">
+                        <h3 class="display-6 anim-2">{{data.desc_title}}</h3>
+                        <h4 class="display-6 anim-2">{{data.dob}}</h4>
+                        <h4 class="display-6 anim-2">{{data.age}} Years</h4>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-8 text-left mission-border anim-2">
+                        <div class="title-desc anim-2">
+                            <p>
+                              {{data.desc}}
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-left mb-2">
+                          <a class="icon-btn resume-btn" href="{{data.resume}}" style="width:100%" target="_blank">
+                              <i class="fa fa-file-text mr-3" aria-hidden="true"></i>
+                              VIEW RESUME
+                          </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="section-footer scrolldown">
+                <a class="down">
+                    <span class="icon"></span>
+                    <span class="txt">Experiance</span>
+                </a>
+            </footer>
+        </div>
+    </div>
+    <!-- End About -->
+
+    <!-- Start Experiance -->
+    <div class="section section-list-feature fp-auto-height-responsive" data-section="exp">
+        <div class="section-wrapper twoside center-vh dir-col anim">
+          <div class="anim-2 text-center mb-3" id="titles" style="width:100%">
+            <div class="row d-flex justify-content-center align-items-center">
+              <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+                <h2 class="display-6 display-title text-uppercase info-hover"  id="education-title">Education</h2>
+              </div>
+              <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+                <h2 class="display-6 display-title text-uppercase info-hover" id="experiance-title">Experiance</h2>
+              </div>
+              <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+                <h2 class="display-6 display-title text-uppercase info-hover" id="skills-title">Skills</h2>
+              </div>
+            </div>
+              <h4 id="skill-desc" style="display:none;opacity:0.7">Skills I have acquired</h4>
+              <h4 id="exp-desc" style="opacity:0.7">Professional work I have done so far</h4>
+              <h4 id="edu-desc" style="display:none;opacity:0.7">Education I have completed</h4>
+          </div>
+
+          <div class="" id="exp-slide" >
+            <div class="" style="position:relative" id="exp-panel1">   
+              {% for job in data.jobs %}  
+                  {% if loop.index0 == 0 %}
+                  <div class="" id="exp_{{loop.index0}}" > 
+                    <div class="item row justify-content-between fade-1 exp-carousel" >
+                  {% else %}
+                  <div class="" id="exp_{{loop.index0}}" style="display:none" > 
+                    <div class="item row justify-content-between fade-1 exp-carousel">
+                  {% endif %}
+                {% for j in job %}
+                  <div class="col-12 col-md-6 col-lg-6">
+                      <div class="section-content reduced">
+                          <div class="media">
+                              <div class="media-body">
+                                  <h4 class="mb-0">{{j.title}}</h4>
+                                  <h5>{{j.title2}}</h5>
+                                  <h6>{{j.company}}</h6>
+                                  <h6>{{j.timeline}}</h6>
+                                  <i class="icon fa fa-briefcase" style="opacity:0.5"></i>
+                                  {% for d in j.desc %}
+                                    <p>{{d}}</p>
+                                  {% endfor %}
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+              {% endfor %}
+              <div class="" style="position:absolute;bottom:10px;right:10px">
+                <i class="fa fa-chevron-right carousel-next" aria-hidden="true"></i>
+                <span class="carousel-index" style="display:none">0</span>
+                <span class="carousel-name" style="display:none">exp</span>
+              </div>
+            </div>
+            <div class="anim-2 text-center mb-3">
+                <i class="icon fa fa-chevron-up" id="exp-toggle"></i>
+                <h3 class="display-6 display-title">Leadership and Volunteering</h3> 
+            </div>
+            <div class="" style="display:none" id="exp-panel">
+              {% for exps in data.exp %}
+              <div class="item row justify-content-between fade-1">
+                {% for ex in exps %}
+                  <div class="col-6 col-md-6 col-lg-3">
+                      <div class="section-content reduced">
+                          <div class="media">
+                              <div class="media-body">
+                                  <h5>{{ex.positon}}</h5>
+                                  <h6>{{ex.commitee}}</h6>
+                                  <h6>{{ex.timeline}}</h6>
+                                  <i class="icon fa fa-handshake-o"></i>
+                                  <p>{{ex.desc}}</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endfor %}
+            </div>
+          </div>
+          
+          <div class="" style="display:none;position:relative" id="edu-slide">
+            {% for edu in data.edu %}
+            {% if loop.index0 == 0 %}
+            <div class="" id="edu_{{loop.index0}}" > 
+              <div class="item row justify-content-between fade-1 edu-carousel" >
+            {% else %}
+            <div class="" id="edu_{{loop.index0}}" style="display:none" > 
+              <div class="item row justify-content-between fade-1 edu-carousel">
+            {% endif %}
+              {% for ed in edu %}
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="section-content reduced">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="mb-0">{{ed.degree}}</h4>
+                                <h5>{{ed.university}}</h5>
+                                <h6>{{ed.gpa}}</h6>
+                                <h6>{{ed.timeline}}</h6>
+                                <i class="icon fa fa-book" style="opacity:0.5"></i>
+                                <p>{{ed.location}}</p>
+                                <p>
+                                  {% for c in ed.courses %}
+                                  {{c}} ,
+                                  {% endfor %}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endfor %}
+            <div class="" style="position:absolute;bottom:10px;right:10px">
+              <i class="fa fa-chevron-right carousel-next" aria-hidden="true"></i>
+              <span class="carousel-index" style="display:none">0</span>
+              <span class="carousel-name" style="display:none">edu</span>
+            </div>
+          </div>
+            
+          <div class="" style="display:none;width:100%" id="skill-slide">
+            <div class="item row justify-content-between fade-1" style="width:100%">
+              <div class="col-12 col-md-6 col-lg-6">
+                  <div class="section-content reduced">
+                      <div class="media">
+                          <div class="media-body">
+                            <div class="text-center">
+                              <h4 class="text-uppercase font-weight-bold mb-3">Technical</h4>
+                            </div>
+                              <i class="icon fa fa-superpowers" style="opacity:0.5"></i>
+                              <div class="container-fluid">
+                                <div class="row">
+                                  <div class="col-6 col-lg-6 col-sm-12">
+                                    {% for s in data.tskills.0 %}
+                                    <p class="font-weight-bold">{{s}}</p>
+                                    {% endfor %}
+                                  </div> 
+                                  <div class="col-6 col-lg-6 col-sm-12">
+                                    {% for s in data.tskills.1 %}
+                                    <p class="font-weight-bold">{{s}}</p>
+                                    {% endfor %}
+                                  </div>   
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>      
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="section-content reduced">
+                        <div class="media">
+                            <div class="media-body">
+                              <div class="text-center">
+                                <h4 class="text-uppercase font-weight-bold mb-3">Non Technical</h4>
+                              </div>
+                                <i class="icon fa fa-superpowers" style="opacity:0.5"></i>
+                                <div class="container-fluid">
+                                  <div class="row">
+                                    <div class="col-6 col-lg-6 col-sm-12">
+                                      {% for s in data.ntskills.0 %}
+                                      <p class="font-weight-bold">{{s}}</p>
+                                      {% endfor %}
+                                    </div> 
+                                    <div class="col-6 col-lg-6 col-sm-12">
+                                      {% for s in data.ntskills.1 %}
+                                      <p class="font-weight-bold">{{s}}</p>
+                                      {% endfor %}
+                                    </div>   
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+          </div>    
+
+            <footer class="section-footer scrolldown">
+                <a class="down">
+                    <span class="icon"></span>
+                    <span class="txt">Projects</span>
+                </a>
+            </footer>
+        </div>
+    </div>
+    <!-- End Experiance -->
+
+    <!-- Start Project -->
+    <div class="section testimonials section-team fp-auto-height-responsive " data-section="projects">
+        <div class="section-wrapper center-vh dir-col anim">
+            <div class="section-title text-center">
+                <h2 class="display-4 display-title anim-2 mb-32">Projects</h2>
+            </div>
+            
+            <div class="swiper-container carousel-swiper-beta slider-container fade-2 swiper-container-horizontal">
+                <div class="item-list swiper-wrapper m-0 p-0">
+                  {% for p in data.projects %}
+                    <div class="swiper-slide">
+                      <div class="media-slide-item-gamma">
+                          <div class="media-content text-anim">
+                              <div class="row">
+                                  <div class="col col-12 m-auto container-fluid">
+                                      <div class="row justify-content-center m-0 p-0">
+                                        {% for pr in p %}
+                                        <div class="col-lg-3 col-sm-12 col-md-12 mt-2">
+                                          <div class="section-content anim translateUp">
+                                              <div class="images text-center">
+                                                  <div class="img-avatar-alpha">
+                                                      <div class="img-1 shadow project">
+                                                          <!-- <a href=""> -->
+                                                              <img class="img" src="{{ url_for('static', filename=pr.img) }}" alt="Image">
+                                                          <!-- </a> -->
+                                                          <div class="legend pos-abs">
+                                                              <div class="text-left">
+                                                                  <h5 class="proj-name">{{pr.name}}</h5>
+                                                                  <p class="text-uppercase text-bold proj-topic">{{pr.topic}}</p>
+                                                              </div>
+                                                              <div class="text-center mt-2">
+                                                                  <p class="small proj-lang">{{pr.lang}}</p>
+                                                              </div>
+                                                              <span class="proj-desc d-none">{{pr.desc}}</span>
+                                                              <span class="proj-timeline d-none">{{pr.timeline}}</span>
+                                                              <span class="proj-git d-none">{{pr.github}}</span>
+                                                              <span class="proj-link d-none">{{pr.link}}</span>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="icons text-right">
+                                                {% if pr.link != "" %}
+                                                  <a class="icon-btn" href="{{pr.link}}" target="_blank">
+                                                      <i class="fa fa-link" aria-hidden="true"></i>
+                                                  </a>
+                                                {% else %}
+                                                <a class="icon-btn" style="opacity:0.3">
+                                                    <i class="fa fa-link" aria-hidden="true"></i>
+                                                </a>
+                                                {% endif %}
+                                                {% if pr.github != "" %}
+                                                  <a class="icon-btn" href="{{pr.github}}" target="_blank">
+                                                      <i class="fa fa-code-fork" aria-hidden="true"></i>
+                                                  </a>
+                                                {% else %}
+                                                  <a class="icon-btn" style="opacity:0.3">
+                                                      <i class="fa fa-code-fork" aria-hidden="true"></i>
+                                                  </a>
+                                                {% endif %}
+                                              </div>
+                                          </div>
+                                        </div>   
+                                        {% endfor %}
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+
+                <nav class="items-navigation">
+                    <div class="items-pagination bar swiper-pagination-clickable swiper-pagination-bullets">
+                        <span class="swiper-pagination-bullet"></span>
+                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                        <span class="swiper-pagination-bullet"></span>
+                    </div>
+                </nav>
+            </div>
+
+            <footer class="section-footer scrolldown">
+                <a class="down">
+                    <span class="icon"></span>
+                    <span class="txt">Artwork</span>
+                </a>
+            </footer>
+        </div>
+    </div>
+    <!-- End Project -->
+
+    <!-- Start Artwork -->
+    <div class="section section-twoside fp-auto-height-responsive " data-section="artwork">
+        <div class="section-wrapper twoside dir-col anim">
+            <div class="section-title center-vh  dir-col text-center">
+                <h2 class="display-4 display-title anim-2 mb-32">Artwork</h2>
+            </div>
+
+            <div class="slider-wrapper carousel-swiper-beta fade-1 carousel-smalls carousel-swiper-beta-demo">
+                <div class="slider-container swiper-container">
+                    <ul class="item-list swiper-wrapper">
+                      {% for art in data.artwork %}
+                        <li class="slide-item swiper-slide art-slide">
+                            <div class="item-wrapper">
+                                <div class="illustr">
+                                    <img class="img art-img" src="{{ url_for('static', filename=art.img) }}" alt="Image">
+                                </div>
+                                <a class="legend artwork" style="width:100%">
+                                    <h2 class="display-4 art-name">{{art.name}}</h2>
+                                    <p class="art-date">{{art.date}}</p>
+                                    <span class="art-src d-none">{{ url_for('static', filename=art.img) }}</span>
+                                </a>
+                            </div>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                </div>
+                <div class="items-pagination bar"></div>
+            </div>
+
+            <footer class="section-footer scrolldown">
+                <a class="down">
+                    <span class="icon"></span>
+                    <span class="txt">Contact</span>
+                </a>
+            </footer>
+        </div>
+    </div>
+    <!-- End Artwork -->
+
+    <!-- Start Contact -->
+    <div class="section section-contact fp-auto-height-responsive no-slide-arrows " data-section="contact">
+        <div class="section-wrapper center-vh dir-col anim">
+            <div class="section-title text-center">
+                <h2 class="display-4 display-title">Contact Me</h2>
+            </div>
+
+            <div class="section-content reduced">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-12 contact-right">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex justify-content-center align-items-center mt-0">
+                                    <div style="width:25%;margin-top:0">
+                                      <h2 class="display-2 anim-2">
+                                        <i class="icon fa fa-map"></i>
+                                      </h2>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 mission-border anim-2">
+                                <div class="d-flex justify-content-center align-items-center anim-2 mt-0">
+                                  <div style="width:95%;margin-top:0">
+                                      <h4>Address</h4>
+                                      {% for addr in data.address %}
+                                        <p>{{addr}}</p>
+                                      {% endfor %}
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex justify-content-center align-items-center mt-0">
+                                    <div style="width:25%;margin-top:0">
+                                      <h2 class="display-2 anim-2">
+                                        <i class="icon fa fa-phone-square"></i>
+                                      </h2>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 mission-border anim-2">
+                                <div class="d-flex justify-content-center align-items-center anim-2 mt-0">
+                                  <div style="width:95%;margin-top:0">
+                                      <h4>Phone</h4>
+                                      {% for no in data.phone %}
+                                        <p>{{no}}</p>
+                                      {% endfor %}
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex justify-content-center align-items-center mt-0">
+                                    <div style="width:25%;margin-top:0">
+                                      <h2 class="display-2 anim-2">
+                                        <i class="icon fa fa-envelope"></i>
+                                      </h2>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 mission-border anim-2">
+                                <div class="d-flex justify-content-center align-items-center anim-2 mt-0">
+                                  <div style="width:95%;margin-top:0">
+                                      <h4>Email</h4>
+                                      {% for mail in data.email %}
+                                        <p>{{mail}}</p>
+                                      {% endfor %}
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact -->
+
+</main>
+<!-- End Content -->
+
+<!-- Start Footer -->
+<footer id="site-footer" class="page-footer">
+    <!-- Left content -->
+    <div class="footer-left">
+        <span class="opacity-75"><i class="fa fa-phone-square" aria-hidden="true"></i>{{data.phone[0]}}</span>
+        <span class="opacity-75"><i class="fa fa-envelope" aria-hidden="true"></i></i>{{data.email[0]}}</span>
+    </div>
+
+    <!-- Right content -->
+    <div class="footer-right">
+        <p class="note">
+          © 2021 Developed by NitishTalekar
+        </p>
+    </div>
+</footer>
+<!-- End Footer  -->
+
+<!-- Scripts -->
+<script src="{{ url_for('static', filename='js/lib/jquery-1.12.4.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/lib/scrolloverflow.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/lib/all.js')}}"></script>
+<script src="{{ url_for('static', filename='js/lib/particlejs/particles.min.js')}}"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Main Script files -->
+<script src="{{ url_for('static', filename='js/custom.js')}}"></script>
+</body>
+</html>
