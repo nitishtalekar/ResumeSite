@@ -5364,7 +5364,7 @@ textarea {
     content: '';
     display: block;
     background: #fff;
-    width: 40%;
+    width: 80%;
     height: 2px;
     margin: 40px auto 5px;
 }
@@ -5373,7 +5373,7 @@ textarea {
     content: '';
     display: block;
     background: #fff;
-    width: 40%;
+    width: 80%;
     height: 2px;
     margin: 5px auto 0;
 }

@@ -15,7 +15,7 @@ import data as info
 
 app = Flask(__name__)
 
-# print('Check http://127.0.0.1:5000/')
+print('Check http://127.0.0.1:5000/')
 
 
 @app.route('/', methods=['GET'])
