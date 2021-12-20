@@ -7,9 +7,9 @@ class ResumeData:
         self.dob = "19th November 1998"
         self.age = self.calculateAge(date(1998, 11, 19))
         self.profile = "img/profile.jpg"
-        self.desc_title = "Nitish Talekars Desc"
+        self.desc_title = "Nitish Talekar"
         self.resume = "https://drive.google.com/file/d/1K1DvCRH16UCzRhUrGEZA3pmy2aktX1Dj/preview"
-        self.desc = "A software engineer with a desire to learn and adapt to different challenges thrown at him. An individual who believes in being a team player with demonstrated leadership skills. Result oriented, creative minded & solution driven."
+        self.desc = "Software engineer with a desire to learn and adapt to different challenges thrown at him. An individual who believes in being a team player with demonstrated leadership skills. Result oriented, creative minded & solution driven."
         self.edu = [
             {
                 "university":"North Carolina State University",
@@ -34,6 +34,37 @@ class ResumeData:
                             "Computer Organization",
                             "Software Engineering"],
                 "gpa": "8.96/10.0"
+            },
+            {
+                "university":"Maharashtra State Board",
+                "location":"India",
+                "degree":"Higher Secondary School Certificate",
+                "timeline":"June 2014 – May 2016",
+                "courses": ["Sorftware Science",
+                            "Hardware Science",
+                            "Applied Mathematics",
+                            "Applied Chemistry",
+                            "Applied Physics"
+                            ],
+                "gpa": "88/100"
+            },
+            {
+                "university":"Maharashtra State Board",
+                "location":"India",
+                "degree":"Secondary School Certificate",
+                "timeline":"July 2002 – March 2014",
+                "courses": ["Science",
+                            "Mathematics",
+                            "History",
+                            "Geography",
+                            "ICT",
+                            "English",
+                            "Hindi",
+                            "Marathi",
+                            "Hindi",
+                            "Sanskrit"
+                            ],
+                "gpa": "88/100"
             }
         ]
         self.jobs = [
@@ -56,19 +87,29 @@ class ResumeData:
                     "Developed front-end and back-end technologies for the web-platform. Designed the user interface using HTML, CSS and PHP and maintained databases with help of MySQL."
                 ],
                 "timeline": "September 2018 – March 2019"
-            },
-            {
-                "title": "Intern22",
-                "title2": "Technology Developer",
-                "company": "Naman Angels India Foundation",
-                "desc":[
-                    "Planned and launched a web platform which allows investors to interact with and invest in start-ups of their preference, and startups to display their value to investors.",
-                    "Developed front-end and back-end technologies for the web-platform. Designed the user interface using HTML, CSS and PHP and maintained databases with help of MySQL."
-                ],
-                "timeline": "September 2018 – March 2019"
             }
         ]
         self.projects = [
+            {
+                "name": "Peer-to-Peer File System",
+                "topic": "Socket Programming",
+                "timeline": "November 2021",
+                "desc": "Development of a P2P File distribution system for file transfers using TCP connection. Implementation of a central server for tracking files.",
+                "link": "",
+                "github" : "",
+                "img": "proj/ml.png",
+                "lang": "Python, Socket Programming"
+            },
+            {
+                "name": "Prediction of Rainfall",
+                "topic": "Machine Learning",
+                "timeline": "November 2021",
+                "desc": "Construction of a stacked model to predict rainfall for the next day based on wether station data. Implemented stacking of base models and feature reduction.",
+                "link": "",
+                "github" : "",
+                "img": "proj/ml.png",
+                "lang": "Python, Sci-Kit learn, Tensorflow"
+            },
             {
                 "name": "Predictive Model Comparator Platform",
                 "topic": "Machine Learning",
@@ -165,32 +206,35 @@ class ResumeData:
                 "img": "art/galaxy.png"
             },
             {
-                "name": "Montains",
+                "name": "Nebula",
                 "date": "2020",
                 "img": "art/nebula.png"
-            },
-            {
-                "name": "Desert",
-                "date": "2020",
-                "img": "art/galaxy.png"
             }
         ]
         self.skills = {
                 "non_technical":
                     ["Leadership",
                     "Project Management",
-                    "Teamwork"],
+                    "Teamwork",
+                    "Project Planning",
+                    "Public Speaking",
+                    "Technical Writing"
+                    ],
                 "technical":
                     ["Python",
                     "C",
                     "Java"
                     "Javascript",
-                    "jQuery"
+                    "jQuery",
+                    "HTML",
+                    "CSS",
+                    "MySQL",
+                    "PHP",
+                    "Ajax",
+                    "Flask",
+                    "Django"
                     ]
                 }
-        self.hobbies = [
-        
-        ]
         self.email = [
             "ntaleka@ncsu.edu",
             "nitishtalekar.nt503@gmail.com"
