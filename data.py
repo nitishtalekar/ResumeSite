@@ -268,7 +268,6 @@ class ResumeData:
             "links"         : self.links,
             "address"       : self.address,
             "phone"         : self.phone,
-            "hobbies"       : self.hobbies,
             "tskills"       : self.divide(self.skills["technical"],(len(self.skills["technical"])+1)//2),
             "ntskills"      : self.divide(self.skills["non_technical"],(len(self.skills["non_technical"])+1)//2),
             "projects"      : self.divide(self.projects,3),
