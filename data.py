@@ -96,7 +96,7 @@ class ResumeData:
                 "timeline": "November 2021",
                 "desc": "Development of a P2P File distribution system for file transfers using TCP connection. Implementation of a central server for tracking files.",
                 "link": "",
-                "github" : "",
+                "github" : "https://github.com/nitishtalekar/CSC-573-InternetProtocols/tree/main/P2P-CI",
                 "img": "proj/ml.png",
                 "lang": "Python, Socket Programming"
             },
@@ -105,6 +105,16 @@ class ResumeData:
                 "topic": "Machine Learning",
                 "timeline": "November 2021",
                 "desc": "Construction of a stacked model to predict rainfall for the next day based on wether station data. Implemented stacking of base models and feature reduction.",
+                "link": "",
+                "github" : "https://github.ncsu.edu/uchhapr/engr-ALDA-fall2021-P27",
+                "img": "proj/ml.png",
+                "lang": "Python, Sci-Kit learn, Tensorflow"
+            },
+            {
+                "name": "Japanese - English Translator",
+                "topic": "Natural Language Processsing",
+                "timeline": "March 2020",
+                "desc": "Implemented natural language processing techniques to translate simple Japanese sentences to English text. Construction of deep learning model using POS tagging.",
                 "link": "",
                 "github" : "",
                 "img": "proj/ml.png",
@@ -136,7 +146,7 @@ class ResumeData:
                 "timeline": "March 2020",
                 "desc": "Determination of underlying disease in crops from image input using Image Processing, Neural Networks and Classification techniques. Creation of web platform for effective use.",
                 "link": "",
-                "github" : "",
+                "github" : "https://github.com/aayooush/CDDD",
                 "img": "proj/ai.png",
                 "lang": "Python, Tensorflow, Keras"
             },
