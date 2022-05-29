@@ -1,0 +1,52 @@
+<div class="section section-description fp-auto-height-responsive about-section" data-section="about">
+    <div class="section-wrapper center-vh dir-col anim">
+        <div class="section-title text-center">
+            <h2 class="display-4 display-title anim-2 mb-32">About Me</h2>
+        </div>
+
+        <div class="section-content reduced">
+            <div class="row">
+              <div class="col-12 col-md-12 mb-4">
+                <div class="row d-flex justify-content-center align-ites-center">
+                  <div class="col-lg-5 col-sm-10 col-md-10 mt-2">
+                        <div class="images text-center">
+                            <div class="img-avatar-alpha">
+                                <div class="img-1">
+                                        <img class="img" src="{{ url_for('static', filename=data.profile) }}" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                  </div>   
+                </div>
+              </div>
+              <div class="col-12 col-md-4 text-left">
+                  <div class="title-desc pr-4">
+                    <h3 class="display-6 anim-2">{{data.desc_title}}</h3>
+                    <h4 class="display-6 anim-2">{{data.dob}}</h4>
+                    <h4 class="display-6 anim-2">{{data.age}} Years</h4>
+                  </div>
+              </div>
+              <div class="col-12 col-md-8 text-left mission-border anim-2">
+                    <div class="title-desc anim-2">
+                        <p>
+                          {{data.desc}}
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-left mb-2">
+                      <a class="icon-btn resume-btn" href="{{data.resume}}" style="width:100%" target="_blank">
+                          <i class="fa fa-file-text mr-3" aria-hidden="true"></i>
+                          VIEW RESUME
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="section-footer scrolldown">
+            <a class="down">
+                <span class="icon"></span>
+                <span class="txt">Experiance</span>
+            </a>
+        </footer>
+    </div>
+</div>

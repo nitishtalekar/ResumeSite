@@ -1,0 +1,89 @@
+<div class="section testimonials section-team fp-auto-height-responsive " data-section="projects">
+    <div class="section-wrapper center-vh dir-col anim">
+        <div class="section-title text-center">
+            <h2 class="display-4 display-title anim-2 mb-32">Projects</h2>
+        </div>
+        
+        <div class="swiper-container carousel-swiper-beta slider-container fade-2 swiper-container-horizontal">
+            <div class="item-list swiper-wrapper m-0 p-0">
+              {% for p in data.projects %}
+                <div class="swiper-slide">
+                  <div class="media-slide-item-gamma">
+                      <div class="media-content text-anim">
+                          <div class="row">
+                              <div class="col col-12 m-auto container-fluid">
+                                  <div class="row justify-content-center m-0 p-0">
+                                    {% for pr in p %}
+                                    <div class="col-lg-3 col-sm-12 col-md-12 mt-2">
+                                      <div class="section-content anim translateUp">
+                                          <div class="images text-center">
+                                              <div class="img-avatar-alpha">
+                                                  <div class="img-1 shadow project">
+                                                      <!-- <a href=""> -->
+                                                          <img class="img" src="{{ url_for('static', filename=pr.img) }}" alt="Image">
+                                                      <!-- </a> -->
+                                                      <div class="legend pos-abs">
+                                                          <div class="text-left">
+                                                              <h5 class="proj-name">{{pr.name}}</h5>
+                                                              <p class="text-uppercase text-bold proj-topic">{{pr.topic}}</p>
+                                                          </div>
+                                                          <div class="text-center mt-2">
+                                                              <p class="small proj-lang">{{pr.lang}}</p>
+                                                          </div>
+                                                          <span class="proj-desc d-none">{{pr.desc}}</span>
+                                                          <span class="proj-timeline d-none">{{pr.timeline}}</span>
+                                                          <span class="proj-git d-none">{{pr.github}}</span>
+                                                          <span class="proj-link d-none">{{pr.link}}</span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="icons text-right">
+                                            {% if pr.link != "" %}
+                                              <a class="icon-btn" href="{{pr.link}}" target="_blank">
+                                                  <i class="fa fa-link" aria-hidden="true"></i>
+                                              </a>
+                                            {% else %}
+                                            <a class="icon-btn" style="opacity:0.3">
+                                                <i class="fa fa-link" aria-hidden="true"></i>
+                                            </a>
+                                            {% endif %}
+                                            {% if pr.github != "" %}
+                                              <a class="icon-btn" href="{{pr.github}}" target="_blank">
+                                                  <i class="fa fa-code-fork" aria-hidden="true"></i>
+                                              </a>
+                                            {% else %}
+                                              <a class="icon-btn" style="opacity:0.3">
+                                                  <i class="fa fa-code-fork" aria-hidden="true"></i>
+                                              </a>
+                                            {% endif %}
+                                          </div>
+                                      </div>
+                                    </div>   
+                                    {% endfor %}
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+
+            <nav class="items-navigation">
+                <div class="items-pagination bar swiper-pagination-clickable swiper-pagination-bullets">
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                </div>
+            </nav>
+        </div>
+
+        <footer class="section-footer scrolldown">
+            <a class="down">
+                <span class="icon"></span>
+                <span class="txt">Artwork</span>
+            </a>
+        </footer>
+    </div>
+</div>

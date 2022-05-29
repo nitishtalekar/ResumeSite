@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>NitishTalekar</title>
-    <meta name="description" content="Creative portfolio template. Fully responsive with cool animations">
+    <meta name="description" content="Resume Website">
     <meta name="keywords" content="agency, bootstrap, business, company, corporate, creative, clean, modern, multipurpose, onepage, personal, portfolio, professional, responsive, minimal">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
     
@@ -88,14 +88,13 @@
 
     {% include 'elements/logo.html' %} 
     
-    
-
     <div class="all-menu-wrapper" id="navbarMenu">
       
       {% include 'elements/navbar.html' %} 
       {% include 'elements/sidebar.html' %} 
   
     </div>
+    
 </header>
 <!-- End Header -->
 
@@ -110,494 +109,33 @@
     {% include 'sections/landing.html' %}
 
     <!-- Start About -->
-    <div class="section section-description fp-auto-height-responsive about-section" data-section="about">
-        <div class="section-wrapper center-vh dir-col anim">
-            <div class="section-title text-center">
-                <h2 class="display-4 display-title anim-2 mb-32">About Me</h2>
-            </div>
-
-            <div class="section-content reduced">
-                <div class="row">
-                  <div class="col-12 col-md-12 mb-4">
-                    <div class="row d-flex justify-content-center align-ites-center">
-                      <div class="col-lg-5 col-sm-10 col-md-10 mt-2">
-                            <div class="images text-center">
-                                <div class="img-avatar-alpha">
-                                    <div class="img-1">
-                                            <img class="img" src="{{ url_for('static', filename=data.profile) }}" alt="Image">
-                                    </div>
-                                </div>
-                            </div>
-                      </div>   
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-4 text-left">
-                      <div class="title-desc pr-4">
-                        <h3 class="display-6 anim-2">{{data.desc_title}}</h3>
-                        <h4 class="display-6 anim-2">{{data.dob}}</h4>
-                        <h4 class="display-6 anim-2">{{data.age}} Years</h4>
-                      </div>
-                  </div>
-                  <div class="col-12 col-md-8 text-left mission-border anim-2">
-                        <div class="title-desc anim-2">
-                            <p>
-                              {{data.desc}}
-                            </p>
-                        </div>
-                        <div class="d-flex justify-content-left mb-2">
-                          <a class="icon-btn resume-btn" href="{{data.resume}}" style="width:100%" target="_blank">
-                              <i class="fa fa-file-text mr-3" aria-hidden="true"></i>
-                              VIEW RESUME
-                          </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <footer class="section-footer scrolldown">
-                <a class="down">
-                    <span class="icon"></span>
-                    <span class="txt">Experiance</span>
-                </a>
-            </footer>
-        </div>
-    </div>
+    {% include 'sections/about.html' %}
     <!-- End About -->
 
     <!-- Start Experiance -->
-    <div class="section section-list-feature fp-auto-height-responsive" data-section="exp">
-        <div class="section-wrapper twoside center-vh dir-col anim">
-          <div class="anim-2 text-center mb-3" id="titles" style="width:100%">
-            <div class="row d-flex justify-content-center align-items-center">
-              <div class="col-12 col-lg-4 col-md-12 col-sm-12">
-                <h2 class="display-6 display-title text-uppercase info-hover"  id="education-title">Education</h2>
-              </div>
-              <div class="col-12 col-lg-4 col-md-12 col-sm-12">
-                <h2 class="display-6 display-title text-uppercase info-hover" id="experiance-title">Experiance</h2>
-              </div>
-              <div class="col-12 col-lg-4 col-md-12 col-sm-12">
-                <h2 class="display-6 display-title text-uppercase info-hover" id="skills-title">Skills</h2>
-              </div>
-            </div>
-              <h4 id="skill-desc" style="display:none;opacity:0.7">Skills I have acquired</h4>
-              <h4 id="exp-desc" style="opacity:0.7">Professional work I have done so far</h4>
-              <h4 id="edu-desc" style="display:none;opacity:0.7">Education I have completed</h4>
-          </div>
-
-          <div class="" id="exp-slide" >
-            <div class="" style="position:relative" id="exp-panel1">   
-              {% for job in data.jobs %}  
-                  {% if loop.index0 == 0 %}
-                  <div class="" id="exp_{{loop.index0}}" > 
-                    <div class="item row justify-content-between fade-1 exp-carousel" >
-                  {% else %}
-                  <div class="" id="exp_{{loop.index0}}" style="display:none" > 
-                    <div class="item row justify-content-between fade-1 exp-carousel">
-                  {% endif %}
-                {% for j in job %}
-                  <div class="col-12 col-md-6 col-lg-6">
-                      <div class="section-content reduced">
-                          <div class="media">
-                              <div class="media-body">
-                                  <h4 class="mb-0">{{j.title}}</h4>
-                                  <h5>{{j.title2}}</h5>
-                                  <h6>{{j.company}}</h6>
-                                  <h6>{{j.timeline}}</h6>
-                                  <i class="icon fa fa-briefcase" style="opacity:0.5"></i>
-                                  {% for d in j.desc %}
-                                    <p>{{d}}</p>
-                                  {% endfor %}
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                {% endfor %}
-              </div>
-            </div>
-              {% endfor %}
-              <div class="" style="position:absolute;bottom:10px;right:10px">
-                <i class="fa fa-chevron-right carousel-next" aria-hidden="true"></i>
-                <span class="carousel-index" style="display:none">0</span>
-                <span class="carousel-name" style="display:none">exp</span>
-              </div>
-            </div>
-            <div class="anim-2 text-center mb-3">
-                <i class="icon fa fa-chevron-up" id="exp-toggle"></i>
-                <h3 class="display-6 display-title">Leadership and Volunteering</h3> 
-            </div>
-            <div class="" style="display:none" id="exp-panel">
-              {% for exps in data.exp %}
-              <div class="item row justify-content-between fade-1">
-                {% for ex in exps %}
-                  <div class="col-6 col-md-6 col-lg-3">
-                      <div class="section-content reduced">
-                          <div class="media">
-                              <div class="media-body">
-                                  <h5>{{ex.positon}}</h5>
-                                  <h6>{{ex.commitee}}</h6>
-                                  <h6>{{ex.timeline}}</h6>
-                                  <i class="icon fa fa-handshake-o"></i>
-                                  <p>{{ex.desc}}</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                {% endfor %}
-              </div>
-            {% endfor %}
-            </div>
-          </div>
-          
-          <div class="" style="display:none;position:relative" id="edu-slide">
-            {% for edu in data.edu %}
-            {% if loop.index0 == 0 %}
-            <div class="" id="edu_{{loop.index0}}" > 
-              <div class="item row justify-content-between fade-1 edu-carousel" >
-            {% else %}
-            <div class="" id="edu_{{loop.index0}}" style="display:none" > 
-              <div class="item row justify-content-between fade-1 edu-carousel">
-            {% endif %}
-              {% for ed in edu %}
-                <div class="col-12 col-md-6 col-lg-6">
-                    <div class="section-content reduced">
-                        <div class="media">
-                            <div class="media-body">
-                                <h4 class="mb-0">{{ed.degree}}</h4>
-                                <h5>{{ed.university}}</h5>
-                                <h6>{{ed.gpa}}</h6>
-                                <h6>{{ed.timeline}}</h6>
-                                <i class="icon fa fa-book" style="opacity:0.5"></i>
-                                <p>{{ed.location}}</p>
-                                <p>
-                                  {% for c in ed.courses %}
-                                  {{c}} ,
-                                  {% endfor %}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              {% endfor %}
-            </div>
-          </div>
-          {% endfor %}
-            <div class="" style="position:absolute;bottom:10px;right:10px">
-              <i class="fa fa-chevron-right carousel-next" aria-hidden="true"></i>
-              <span class="carousel-index" style="display:none">0</span>
-              <span class="carousel-name" style="display:none">edu</span>
-            </div>
-          </div>
-            
-          <div class="" style="display:none;width:100%" id="skill-slide">
-            <div class="item row justify-content-between fade-1" style="width:100%">
-              <div class="col-12 col-md-6 col-lg-6">
-                  <div class="section-content reduced">
-                      <div class="media">
-                          <div class="media-body">
-                            <div class="text-center">
-                              <h4 class="text-uppercase font-weight-bold mb-3">Technical</h4>
-                            </div>
-                              <i class="icon fa fa-superpowers" style="opacity:0.5"></i>
-                              <div class="container-fluid">
-                                <div class="row">
-                                  <div class="col-6 col-lg-6 col-sm-12">
-                                    {% for s in data.tskills.0 %}
-                                    <p class="font-weight-bold">{{s}}</p>
-                                    {% endfor %}
-                                  </div> 
-                                  <div class="col-6 col-lg-6 col-sm-12">
-                                    {% for s in data.tskills.1 %}
-                                    <p class="font-weight-bold">{{s}}</p>
-                                    {% endfor %}
-                                  </div>   
-                                </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>      
-                <div class="col-12 col-md-6 col-lg-6">
-                    <div class="section-content reduced">
-                        <div class="media">
-                            <div class="media-body">
-                              <div class="text-center">
-                                <h4 class="text-uppercase font-weight-bold mb-3">Non Technical</h4>
-                              </div>
-                                <i class="icon fa fa-superpowers" style="opacity:0.5"></i>
-                                <div class="container-fluid">
-                                  <div class="row">
-                                    <div class="col-6 col-lg-6 col-sm-12">
-                                      {% for s in data.ntskills.0 %}
-                                      <p class="font-weight-bold">{{s}}</p>
-                                      {% endfor %}
-                                    </div> 
-                                    <div class="col-6 col-lg-6 col-sm-12">
-                                      {% for s in data.ntskills.1 %}
-                                      <p class="font-weight-bold">{{s}}</p>
-                                      {% endfor %}
-                                    </div>   
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>      
-            </div>
-          </div>    
-
-            <footer class="section-footer scrolldown">
-                <a class="down">
-                    <span class="icon"></span>
-                    <span class="txt">Projects</span>
-                </a>
-            </footer>
-        </div>
-    </div>
+    {% include 'sections/experiance.html' %}
     <!-- End Experiance -->
 
     <!-- Start Project -->
-    <div class="section testimonials section-team fp-auto-height-responsive " data-section="projects">
-        <div class="section-wrapper center-vh dir-col anim">
-            <div class="section-title text-center">
-                <h2 class="display-4 display-title anim-2 mb-32">Projects</h2>
-            </div>
-            
-            <div class="swiper-container carousel-swiper-beta slider-container fade-2 swiper-container-horizontal">
-                <div class="item-list swiper-wrapper m-0 p-0">
-                  {% for p in data.projects %}
-                    <div class="swiper-slide">
-                      <div class="media-slide-item-gamma">
-                          <div class="media-content text-anim">
-                              <div class="row">
-                                  <div class="col col-12 m-auto container-fluid">
-                                      <div class="row justify-content-center m-0 p-0">
-                                        {% for pr in p %}
-                                        <div class="col-lg-3 col-sm-12 col-md-12 mt-2">
-                                          <div class="section-content anim translateUp">
-                                              <div class="images text-center">
-                                                  <div class="img-avatar-alpha">
-                                                      <div class="img-1 shadow project">
-                                                          <!-- <a href=""> -->
-                                                              <img class="img" src="{{ url_for('static', filename=pr.img) }}" alt="Image">
-                                                          <!-- </a> -->
-                                                          <div class="legend pos-abs">
-                                                              <div class="text-left">
-                                                                  <h5 class="proj-name">{{pr.name}}</h5>
-                                                                  <p class="text-uppercase text-bold proj-topic">{{pr.topic}}</p>
-                                                              </div>
-                                                              <div class="text-center mt-2">
-                                                                  <p class="small proj-lang">{{pr.lang}}</p>
-                                                              </div>
-                                                              <span class="proj-desc d-none">{{pr.desc}}</span>
-                                                              <span class="proj-timeline d-none">{{pr.timeline}}</span>
-                                                              <span class="proj-git d-none">{{pr.github}}</span>
-                                                              <span class="proj-link d-none">{{pr.link}}</span>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              <div class="icons text-right">
-                                                {% if pr.link != "" %}
-                                                  <a class="icon-btn" href="{{pr.link}}" target="_blank">
-                                                      <i class="fa fa-link" aria-hidden="true"></i>
-                                                  </a>
-                                                {% else %}
-                                                <a class="icon-btn" style="opacity:0.3">
-                                                    <i class="fa fa-link" aria-hidden="true"></i>
-                                                </a>
-                                                {% endif %}
-                                                {% if pr.github != "" %}
-                                                  <a class="icon-btn" href="{{pr.github}}" target="_blank">
-                                                      <i class="fa fa-code-fork" aria-hidden="true"></i>
-                                                  </a>
-                                                {% else %}
-                                                  <a class="icon-btn" style="opacity:0.3">
-                                                      <i class="fa fa-code-fork" aria-hidden="true"></i>
-                                                  </a>
-                                                {% endif %}
-                                              </div>
-                                          </div>
-                                        </div>   
-                                        {% endfor %}
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                  {% endfor %}
-                </div>
-
-                <nav class="items-navigation">
-                    <div class="items-pagination bar swiper-pagination-clickable swiper-pagination-bullets">
-                        <span class="swiper-pagination-bullet"></span>
-                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-                        <span class="swiper-pagination-bullet"></span>
-                    </div>
-                </nav>
-            </div>
-
-            <footer class="section-footer scrolldown">
-                <a class="down">
-                    <span class="icon"></span>
-                    <span class="txt">Artwork</span>
-                </a>
-            </footer>
-        </div>
-    </div>
+    {% include 'sections/projects.html' %}
     <!-- End Project -->
 
     <!-- Start Artwork -->
-    <div class="section section-twoside fp-auto-height-responsive " data-section="artwork">
-        <div class="section-wrapper twoside dir-col anim">
-            <div class="section-title center-vh  dir-col text-center">
-                <h2 class="display-4 display-title anim-2 mb-32">Artwork</h2>
-            </div>
-
-            <div class="slider-wrapper carousel-swiper-beta fade-1 carousel-smalls carousel-swiper-beta-demo">
-                <div class="slider-container swiper-container">
-                    <ul class="item-list swiper-wrapper">
-                      {% for art in data.artwork %}
-                        <li class="slide-item swiper-slide art-slide">
-                            <div class="item-wrapper">
-                                <div class="illustr">
-                                    <img class="img art-img" src="{{ url_for('static', filename=art.img) }}" alt="Image">
-                                </div>
-                                <a class="legend artwork" style="width:100%">
-                                    <h2 class="display-4 art-name">{{art.name}}</h2>
-                                    <p class="art-date">{{art.date}}</p>
-                                    <span class="art-src d-none">{{ url_for('static', filename=art.img) }}</span>
-                                </a>
-                            </div>
-                        </li>
-                      {% endfor %}
-                    </ul>
-                </div>
-                <div class="items-pagination bar"></div>
-            </div>
-
-            <footer class="section-footer scrolldown">
-                <a class="down">
-                    <span class="icon"></span>
-                    <span class="txt">Contact</span>
-                </a>
-            </footer>
-        </div>
-    </div>
+    {% include 'sections/artwork.html' %}
     <!-- End Artwork -->
 
     <!-- Start Contact -->
-    <div class="section section-contact fp-auto-height-responsive no-slide-arrows " data-section="contact">
-        <div class="section-wrapper center-vh dir-col anim">
-            <div class="section-title text-center">
-                <h2 class="display-4 display-title">Contact Me</h2>
-            </div>
-
-            <div class="section-content reduced">
-                <div class="row">
-                    <div class="col-12 col-md-12 col-lg-12 contact-right">
-                        <div class="row">
-                            <div class="col-12 col-md-6">
-                                <div class="d-flex justify-content-center align-items-center mt-0">
-                                    <div style="width:25%;margin-top:0">
-                                      <h2 class="display-2 anim-2">
-                                        <i class="icon fa fa-map"></i>
-                                      </h2>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 mission-border anim-2">
-                                <div class="d-flex justify-content-center align-items-center anim-2 mt-0">
-                                  <div style="width:95%;margin-top:0">
-                                      <h4>Address</h4>
-                                      {% for addr in data.address %}
-                                        <p>{{addr}}</p>
-                                      {% endfor %}
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-12 col-md-6">
-                                <div class="d-flex justify-content-center align-items-center mt-0">
-                                    <div style="width:25%;margin-top:0">
-                                      <h2 class="display-2 anim-2">
-                                        <i class="icon fa fa-phone-square"></i>
-                                      </h2>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 mission-border anim-2">
-                                <div class="d-flex justify-content-center align-items-center anim-2 mt-0">
-                                  <div style="width:95%;margin-top:0">
-                                      <h4>Phone</h4>
-                                      {% for no in data.phone %}
-                                        <p>{{no}}</p>
-                                      {% endfor %}
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-12 col-md-6">
-                                <div class="d-flex justify-content-center align-items-center mt-0">
-                                    <div style="width:25%;margin-top:0">
-                                      <h2 class="display-2 anim-2">
-                                        <i class="icon fa fa-envelope"></i>
-                                      </h2>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 mission-border anim-2">
-                                <div class="d-flex justify-content-center align-items-center anim-2 mt-0">
-                                  <div style="width:95%;margin-top:0">
-                                      <h4>Email</h4>
-                                      {% for mail in data.email %}
-                                        <p>{{mail}}</p>
-                                      {% endfor %}
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include 'sections/contact.html' %}
     <!-- End Contact -->
 
 </main>
 <!-- End Content -->
 
 <!-- Start Footer -->
-<footer id="site-footer" class="page-footer">
-    <!-- Left content -->
-    <div class="footer-left">
-        <span class="opacity-75"><i class="fa fa-phone-square" aria-hidden="true"></i>{{data.phone[0]}}</span>
-        <span class="opacity-75"><i class="fa fa-envelope" aria-hidden="true"></i></i>{{data.email[0]}}</span>
-    </div>
-
-    <!-- Right content -->
-    <div class="footer-right">
-        <p class="note">
-          © 2021 Developed by NitishTalekar
-        </p>
-    </div>
-</footer>
+{% include 'sections/footer.html' %}
 <!-- End Footer  -->
 
 <!-- Scripts -->
-<script src="{{ url_for('static', filename='js/lib/jquery-1.12.4.min.js')}}"></script>
-<script src="{{ url_for('static', filename='js/lib/scrolloverflow.min.js')}}"></script>
-<script src="{{ url_for('static', filename='js/lib/all.js')}}"></script>
-<script src="{{ url_for('static', filename='js/lib/particlejs/particles.min.js')}}"></script>
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<!-- Main Script files -->
-<script src="{{ url_for('static', filename='js/custom.js')}}"></script>
+{% include 'sections/imports2.html' %}
 </body>
 </html>

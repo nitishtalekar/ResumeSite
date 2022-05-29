@@ -1,0 +1,79 @@
+<div class="section section-contact fp-auto-height-responsive no-slide-arrows " data-section="contact">
+    <div class="section-wrapper center-vh dir-col anim">
+        <div class="section-title text-center">
+            <h2 class="display-4 display-title">Contact Me</h2>
+        </div>
+
+        <div class="section-content reduced">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12 contact-right">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="d-flex justify-content-center align-items-center mt-0">
+                                <div style="width:25%;margin-top:0">
+                                  <h2 class="display-2 anim-2">
+                                    <i class="icon fa fa-map"></i>
+                                  </h2>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mission-border anim-2">
+                            <div class="d-flex justify-content-center align-items-center anim-2 mt-0">
+                              <div style="width:95%;margin-top:0">
+                                  <h4>Address</h4>
+                                  {% for addr in data.address %}
+                                    <p>{{addr}}</p>
+                                  {% endfor %}
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="d-flex justify-content-center align-items-center mt-0">
+                                <div style="width:25%;margin-top:0">
+                                  <h2 class="display-2 anim-2">
+                                    <i class="icon fa fa-phone-square"></i>
+                                  </h2>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mission-border anim-2">
+                            <div class="d-flex justify-content-center align-items-center anim-2 mt-0">
+                              <div style="width:95%;margin-top:0">
+                                  <h4>Phone</h4>
+                                  {% for no in data.phone %}
+                                    <p>{{no}}</p>
+                                  {% endfor %}
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="d-flex justify-content-center align-items-center mt-0">
+                                <div style="width:25%;margin-top:0">
+                                  <h2 class="display-2 anim-2">
+                                    <i class="icon fa fa-envelope"></i>
+                                  </h2>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mission-border anim-2">
+                            <div class="d-flex justify-content-center align-items-center anim-2 mt-0">
+                              <div style="width:95%;margin-top:0">
+                                  <h4>Email</h4>
+                                  {% for mail in data.email %}
+                                    <p>{{mail}}</p>
+                                  {% endfor %}
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

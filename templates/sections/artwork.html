@@ -1,0 +1,36 @@
+<div class="section section-twoside fp-auto-height-responsive " data-section="artwork">
+    <div class="section-wrapper twoside dir-col anim">
+        <div class="section-title center-vh  dir-col text-center">
+            <h2 class="display-4 display-title anim-2 mb-32">Artwork</h2>
+        </div>
+
+        <div class="slider-wrapper carousel-swiper-beta fade-1 carousel-smalls carousel-swiper-beta-demo">
+            <div class="slider-container swiper-container">
+                <ul class="item-list swiper-wrapper">
+                  {% for art in data.artwork %}
+                    <li class="slide-item swiper-slide art-slide">
+                        <div class="item-wrapper">
+                            <div class="illustr">
+                                <img class="img art-img" src="{{ url_for('static', filename=art.img) }}" alt="Image">
+                            </div>
+                            <a class="legend artwork" style="width:100%">
+                                <h2 class="display-4 art-name">{{art.name}}</h2>
+                                <p class="art-date">{{art.date}}</p>
+                                <span class="art-src d-none">{{ url_for('static', filename=art.img) }}</span>
+                            </a>
+                        </div>
+                    </li>
+                  {% endfor %}
+                </ul>
+            </div>
+            <div class="items-pagination bar"></div>
+        </div>
+
+        <footer class="section-footer scrolldown">
+            <a class="down">
+                <span class="icon"></span>
+                <span class="txt">Contact</span>
+            </a>
+        </footer>
+    </div>
+</div>

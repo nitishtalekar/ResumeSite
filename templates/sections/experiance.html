@@ -1,0 +1,188 @@
+<div class="section section-list-feature fp-auto-height-responsive" data-section="exp">
+    <div class="section-wrapper twoside center-vh dir-col anim">
+      <div class="anim-2 text-center mb-3" id="titles" style="width:100%">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+            <h2 class="display-6 display-title text-uppercase info-hover"  id="education-title">Education</h2>
+          </div>
+          <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+            <h2 class="display-6 display-title text-uppercase info-hover" id="experiance-title">Experiance</h2>
+          </div>
+          <div class="col-12 col-lg-4 col-md-12 col-sm-12">
+            <h2 class="display-6 display-title text-uppercase info-hover" id="skills-title">Skills</h2>
+          </div>
+        </div>
+          <h4 id="skill-desc" style="display:none;opacity:0.7">Skills I have acquired</h4>
+          <h4 id="exp-desc" style="opacity:0.7">Professional work I have done so far</h4>
+          <h4 id="edu-desc" style="display:none;opacity:0.7">Education I have completed</h4>
+      </div>
+
+      <div class="" id="exp-slide" >
+        <div class="" style="position:relative" id="exp-panel1">   
+          {% for job in data.jobs %}  
+              {% if loop.index0 == 0 %}
+              <div class="" id="exp_{{loop.index0}}" > 
+                <div class="item row justify-content-between fade-1 exp-carousel" >
+              {% else %}
+              <div class="" id="exp_{{loop.index0}}" style="display:none" > 
+                <div class="item row justify-content-between fade-1 exp-carousel">
+              {% endif %}
+            {% for j in job %}
+              <div class="col-12 col-md-6 col-lg-6">
+                  <div class="section-content reduced">
+                      <div class="media">
+                          <div class="media-body">
+                              <h4 class="mb-0">{{j.title}}</h4>
+                              <h5>{{j.title2}}</h5>
+                              <h6>{{j.company}}</h6>
+                              <h6>{{j.timeline}}</h6>
+                              <i class="icon fa fa-briefcase" style="opacity:0.5"></i>
+                              {% for d in j.desc %}
+                                <p>{{d}}</p>
+                              {% endfor %}
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+          {% endfor %}
+          <div class="" style="position:absolute;bottom:10px;right:10px">
+            <i class="fa fa-chevron-right carousel-next" aria-hidden="true"></i>
+            <span class="carousel-index" style="display:none">0</span>
+            <span class="carousel-name" style="display:none">exp</span>
+          </div>
+        </div>
+        <div class="anim-2 text-center mb-3">
+            <i class="icon fa fa-chevron-up" id="exp-toggle"></i>
+            <h3 class="display-6 display-title">Leadership and Volunteering</h3> 
+        </div>
+        <div class="" style="display:none" id="exp-panel">
+          {% for exps in data.exp %}
+          <div class="item row justify-content-between fade-1">
+            {% for ex in exps %}
+              <div class="col-6 col-md-6 col-lg-3">
+                  <div class="section-content reduced">
+                      <div class="media">
+                          <div class="media-body">
+                              <h5>{{ex.positon}}</h5>
+                              <h6>{{ex.commitee}}</h6>
+                              <h6>{{ex.timeline}}</h6>
+                              <i class="icon fa fa-handshake-o"></i>
+                              <p>{{ex.desc}}</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+      
+      <div class="" style="display:none;position:relative" id="edu-slide">
+        {% for edu in data.edu %}
+        {% if loop.index0 == 0 %}
+        <div class="" id="edu_{{loop.index0}}" > 
+          <div class="item row justify-content-between fade-1 edu-carousel" >
+        {% else %}
+        <div class="" id="edu_{{loop.index0}}" style="display:none" > 
+          <div class="item row justify-content-between fade-1 edu-carousel">
+        {% endif %}
+          {% for ed in edu %}
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="section-content reduced">
+                    <div class="media">
+                        <div class="media-body">
+                            <h4 class="mb-0">{{ed.degree}}</h4>
+                            <h5>{{ed.university}}</h5>
+                            <h6>{{ed.gpa}}</h6>
+                            <h6>{{ed.timeline}}</h6>
+                            <i class="icon fa fa-book" style="opacity:0.5"></i>
+                            <p>{{ed.location}}</p>
+                            <p>
+                              {% for c in ed.courses %}
+                              {{c}} ,
+                              {% endfor %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+        <div class="" style="position:absolute;bottom:10px;right:10px">
+          <i class="fa fa-chevron-right carousel-next" aria-hidden="true"></i>
+          <span class="carousel-index" style="display:none">0</span>
+          <span class="carousel-name" style="display:none">edu</span>
+        </div>
+      </div>
+        
+      <div class="" style="display:none;width:100%" id="skill-slide">
+        <div class="item row justify-content-between fade-1" style="width:100%">
+          <div class="col-12 col-md-6 col-lg-6">
+              <div class="section-content reduced">
+                  <div class="media">
+                      <div class="media-body">
+                        <div class="text-center">
+                          <h4 class="text-uppercase font-weight-bold mb-3">Technical</h4>
+                        </div>
+                          <i class="icon fa fa-superpowers" style="opacity:0.5"></i>
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div class="col-6 col-lg-6 col-sm-12">
+                                {% for s in data.tskills.0 %}
+                                <p class="font-weight-bold">{{s}}</p>
+                                {% endfor %}
+                              </div> 
+                              <div class="col-6 col-lg-6 col-sm-12">
+                                {% for s in data.tskills.1 %}
+                                <p class="font-weight-bold">{{s}}</p>
+                                {% endfor %}
+                              </div>   
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>      
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="section-content reduced">
+                    <div class="media">
+                        <div class="media-body">
+                          <div class="text-center">
+                            <h4 class="text-uppercase font-weight-bold mb-3">Non Technical</h4>
+                          </div>
+                            <i class="icon fa fa-superpowers" style="opacity:0.5"></i>
+                            <div class="container-fluid">
+                              <div class="row">
+                                <div class="col-6 col-lg-6 col-sm-12">
+                                  {% for s in data.ntskills.0 %}
+                                  <p class="font-weight-bold">{{s}}</p>
+                                  {% endfor %}
+                                </div> 
+                                <div class="col-6 col-lg-6 col-sm-12">
+                                  {% for s in data.ntskills.1 %}
+                                  <p class="font-weight-bold">{{s}}</p>
+                                  {% endfor %}
+                                </div>   
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+        </div>
+      </div>    
+
+        <footer class="section-footer scrolldown">
+            <a class="down">
+                <span class="icon"></span>
+                <span class="txt">Projects</span>
+            </a>
+        </footer>
+    </div>
+</div>
