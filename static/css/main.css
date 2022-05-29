@@ -1,0 +1,33 @@
+.info-hover{
+  opacity:0.3;
+}
+.info-hover:hover{
+  opacity:1;
+  cursor:pointer;
+}
+.carousel-next:hover{
+  cursor:pointer;
+}
+#exp-toggle:hover{
+  cursor:pointer;
+}
+.btn-link:hover{
+  opacity:0.5;
+  text-decoration: none;
+}
+.btn-link:visited{
+  text-decoration: none;
+}
+.nav-link{
+  text-decoration: none;
+}
+.nav-link:hover{
+  /* font-weight: bold; */
+  opacity: 0.5;
+  text-decoration: none;
+  color: white !important;
+  transition: 0.5s;
+}
+.resume-btn:hover{
+  text-decoration: none !important;
+}

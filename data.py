@@ -259,7 +259,7 @@ class ResumeData:
         ]
         self.links = {
             "facebook":"https://www.facebook.com/nitish.talekar.9/",
-            "linkedin":"https://www.linkedin.com/in/nitish-talekar-a06003160/",
+            "linkedin":"https://www.linkedin.com/in/nitishtalekar/",
             "github":"https://github.com/nitishtalekar",
             "instagram":"https://www.instagram.com/nitishtalekar11/"
         }

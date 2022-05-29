@@ -6,164 +6,9 @@
     <meta name="description" content="Creative portfolio template. Fully responsive with cool animations">
     <meta name="keywords" content="agency, bootstrap, business, company, corporate, creative, clean, modern, multipurpose, onepage, personal, portfolio, professional, responsive, minimal">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/logo-white.png')}}">
-
-    <!-- Web fonts/Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/opensans/stylesheet.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/ionicons/ionicons.min.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/fontawesome/font-awesome.min.css')}}">
-
-    <!-- Vendor CSS -->
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='js/lib/swiper.min.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='js/lib/jquery.fullpage.min.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='js/lib/vegas/vegas.min.css')}}">
-
-    <!-- Main CSS files -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
     
-    <script type="text/javascript">
-    $(document).ready(function() {
-        console.log( "NitishPravinTalekar");
-        $("#experiance-title").css('opacity', '1');
-    });
-    $(document).on('click', '#exp-toggle', function () {
-      $("#exp-panel").slideToggle();
-      $("#exp-panel1").slideToggle();
-      $("#exp-toggle").toggleClass("fa-chevron-down");
-      $("#exp-toggle").toggleClass("fa-chevron-up");
-    });
-    $(document).on('click', '#expedu-toggle', function () {
-        $("#exp-slide").toggle('slide');
-        $("#edu-slide").toggle('slide');
-    });
-    $(document).on('click', '#education-title', function () {
-      $("#exp-slide").fadeOut("fast",function(){
-        $("#skill-slide").fadeOut("fast",function(){
-          $("#edu-slide").fadeIn("fast")
-        })
-      });
-      $("#exp-desc").fadeOut("fast",function(){
-        $("#skill-desc").fadeOut("fast",function(){
-          $("#edu-desc").fadeIn("fast")
-        })
-      });
-      $("#education-title").css('opacity', '1');
-      $("#experiance-title").css('opacity', '0.3');
-      $("#skills-title").css('opacity', '0.3');
-    });
-    $(document).on('click', '#experiance-title', function () {
-      $("#edu-slide").fadeOut("fast",function(){
-        $("#skill-slide").fadeOut("fast",function(){
-          $("#exp-slide").fadeIn("fast");
-        })
-      });
-      $("#edu-desc").fadeOut("fast",function(){
-        $("#skill-desc").fadeOut("fast",function(){
-          $("#exp-desc").fadeIn("fast");
-        })
-      });
-      $("#education-title").css('opacity', '0.3');
-      $("#experiance-title").css('opacity', '1');
-      $("#skills-title").css('opacity', '0.3');
-    });
-    $(document).on('click', '#skills-title', function () {
-      $("#exp-slide").fadeOut("fast",function(){
-        $("#edu-slide").fadeOut("fast",function(){
-          $("#skill-slide").fadeIn("fast");
-        })
-      });
-      $("#exp-desc").fadeOut("fast",function(){
-        $("#edu-desc").fadeOut("fast",function(){
-          $("#skill-desc").fadeIn("fast");
-        })
-      });
-      $("#education-title").css('opacity', '0.3');
-      $("#experiance-title").css('opacity', '0.3');
-      $("#skills-title").css('opacity', '1');
-    });
-    $(document).on('click', '.carousel-next', function () {
-      var index = $(this).parent().children(".carousel-index").text();
-      index2 = (parseInt(index)+1)%2;
-      var id = $(this).parent().children(".carousel-name").text();
-      if($("#"+id+"_"+index2).length){
-        $("#"+id+"_"+index).fadeOut("fast",function(){
-          $("#"+id+"_"+index2).fadeIn("fast")
-        });
-        $(this).parent().children(".carousel-index").text(index2)
-      }
-      else{
-        return
-      }
-    });
+    {% include 'elements/imports.html' %} 
     
-    $(document).on('click', '.artwork', function () {
-      // console.log("HELLO");
-      $("#artwork-name").text($(this).children(".art-name").text() + " - " + $(this).children(".art-date").text());
-      $("#artwork-img").attr("src",$(this).children(".art-src").text());
-      $("#artworkmodal").modal("show");
-    });
-    
-    $(document).on('click', '.project', function () {
-      // console.log("HELLO");
-      $("#project-git").show();
-      $("#project-link").show()
-      $("#project-name").text($(this).children().children().children(".proj-name").text());
-      $("#project-topic").text($(this).children().children().children(".proj-topic").text());
-      $("#project-timeline").text($(this).children().children(".proj-timeline").text());
-      $("#project-desc").text($(this).children().children(".proj-desc").text());
-      $("#project-lang").text($(this).children().children().children(".proj-lang").text());
-      $("#project-git").attr("href",$(this).children().children(".proj-git").text());
-      $("#project-link").attr("href",$(this).children().children(".proj-link").text());
-      if($(this).children().children(".proj-git").text() == ""){
-        $("#project-git").hide();
-      }
-      if($(this).children().children(".proj-link").text() == ""){
-        $("#project-link").hide();
-      }
-      $("#projectmodal").modal("show");
-    });
-    
-    </script>
-    
-    <style media="screen">
-      .info-hover{
-        opacity:0.3;
-      }
-      .info-hover:hover{
-        opacity:1;
-        cursor:pointer;
-      }
-      .carousel-next:hover{
-        cursor:pointer;
-      }
-      #exp-toggle:hover{
-        cursor:pointer;
-      }
-      .btn-link:hover{
-        opacity:0.5;
-        text-decoration: none;
-      }
-      .btn-link:visited{
-        text-decoration: none;
-      }
-      .nav-link{
-        text-decoration: none;
-      }
-      .nav-link:hover{
-        font-weight: bold;
-        text-decoration: none;
-        color: white !important;
-        transition: 0.5s;
-      }
-      .resume-btn:hover{
-        text-decoration: none !important;
-      }
-    </style>
 </head>
 
 <body id="menu" class="body-page">
@@ -241,63 +86,15 @@
       </span>
     </button>
 
-    <a class="navbar-brand" href="#home">
-      <div class="col-3">
-        <img class="" style="width:70%" src="{{ url_for('static', filename='img/logo-white.png')}}" alt="Logo">
-      </div>
-      <!-- <span class="logo">
-        <img class="" src="{{ url_for('static', filename='img/logo-white.png')}}" alt="Logo">
-      </span> -->
-    </a>
+    {% include 'elements/logo.html' %} 
+    
+    
 
     <div class="all-menu-wrapper" id="navbarMenu">
-        <nav class="navbar-mainmenu">
-            <ul class="navbar-nav mr-auto mr-auto-my">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home">home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">about</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#exp">experiance</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#artwork">artwork</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">contact</a>
-                </li>
-            </ul>
-        </nav>
-
-        <nav class="navbar-sidebar ">
-            <ul class="social">
-                <li>
-                    <a href="{{data.links.github}}" target="_blank">
-                        <i class="icon fa fa-github"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{data.links.linkedin}}" target="_blank">
-                        <i class="icon fa fa-linkedin"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{data.links.facebook}}" target="_blank">
-                        <i class="icon fa fa-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{data.links.instagram}}" target="_blank">
-                        <i class="icon fa fa-instagram"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+      
+      {% include 'elements/navbar.html' %} 
+      {% include 'elements/sidebar.html' %} 
+  
     </div>
 </header>
 <!-- End Header -->
@@ -310,29 +107,7 @@
 
 <!-- Start Content -->
 <main class="page-main page-fullpage main-anim" id="mainpage">
-    <!-- Start Home -->
-    <div class="section section-home fullscreen-md fp-auto-height-responsive main-home" data-section="home">
-        <div class="section-wrapper center-vh dir-col anim">
-            <div class="section-content reduced text-center">
-                <div class="row">
-                    <div class="col-12 col-md-12 text-center">
-                        <div class="title-desc">
-                            <h2 class="display-6 display-title home-title anim-2">{{data.name}}</h2>
-                            <h4 class="anim-2 opacity-75">{{data.oneline}}</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <footer class="section-footer scrolldown">
-                <a class="down">
-                    <span class="icon"></span>
-                    <span class="txt">About Me</span>
-                </a>
-            </footer>
-        </div>
-    </div>
-    <!-- End Home -->
+    {% include 'sections/landing.html' %}
 
     <!-- Start About -->
     <div class="section section-description fp-auto-height-responsive about-section" data-section="about">
