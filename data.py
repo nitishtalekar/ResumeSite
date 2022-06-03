@@ -16,9 +16,9 @@ class ResumeData:
                 "location":"USA",
                 "degree":"Master of Computer Science",
                 "timeline":"August 2021 – Present",
-                "courses":["Automated Learning and Data Analysis",
+                "courses":", ".join(["Automated Learning and Data Analysis",
                             "Design and Analysis of Algorithms",
-                            "Internet Protocols"],
+                            "Internet Protocols"]),
                 "gpa": "4.0/4.0"
             },
             {
@@ -26,13 +26,13 @@ class ResumeData:
                 "location":"India",
                 "degree":"Bachelor of Computer Engineering",
                 "timeline":"June 2016 – October 2020",
-                "courses": ["Machine Learning","Data Structures", 
+                "courses": ", ".join(["Machine Learning","Data Structures", 
                             "Algorithms"," Operating Systems",
                             "Human Machine Interaction",
                             "Database Management Systems",
                             "Compiler Construction",
                             "Computer Organization",
-                            "Software Engineering"],
+                            "Software Engineering"]),
                 "gpa": "8.96/10.0"
             },
             {
@@ -40,12 +40,12 @@ class ResumeData:
                 "location":"India",
                 "degree":"Higher Secondary School Certificate",
                 "timeline":"June 2014 – May 2016",
-                "courses": ["Sorftware Science",
+                "courses": ", ".join(["Sorftware Science",
                             "Hardware Science",
                             "Applied Mathematics",
                             "Applied Chemistry",
                             "Applied Physics"
-                            ],
+                            ]),
                 "gpa": "88/100"
             },
             {
@@ -53,7 +53,7 @@ class ResumeData:
                 "location":"India",
                 "degree":"Secondary School Certificate",
                 "timeline":"July 2002 – March 2014",
-                "courses": ["Science",
+                "courses": ", ".join(["Science",
                             "Mathematics",
                             "History",
                             "Geography",
@@ -63,8 +63,8 @@ class ResumeData:
                             "Marathi",
                             "Hindi",
                             "Sanskrit"
-                            ],
-                "gpa": "88/100"
+                            ]),
+                "gpa": "94.8/100"
             }
         ]
         self.jobs = [
