@@ -219,6 +219,21 @@ class ResumeData:
                 "name": "Nebula",
                 "date": "2020",
                 "img": "art/nebula.png"
+            },
+            {
+                "name": "Nebula",
+                "date": "2020",
+                "img": "art/nebula.png"
+            },
+            {
+                "name": "Nebula",
+                "date": "2020",
+                "img": "art/nebula.png"
+            },
+            {
+                "name": "Nebula",
+                "date": "2020",
+                "img": "art/nebula.png"
             }
         ]
         self.skills = {
