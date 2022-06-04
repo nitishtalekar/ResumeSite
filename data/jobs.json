@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Developer",
+        "title2": "Front End",
+        "company": "Depronto Infotech ",
+        "desc": [
+            "Designed user interface for online platform geared towards automating reward systems for insurance agents at HDFC Bank branches. Front-end functionalities were generated using JavaScript, Ajax, and jQuery.",
+            "Assisted in developing mailing interface directed towards broadcasting notices to Axis bank employees via the web-platform."
+        ],
+        "timeline": "October 2020 \u2013 March 2021"
+    },
+    {
+        "title": "Intern",
+        "title2": "Technology Developer",
+        "company": "Naman Angels India Foundation",
+        "desc": [
+            "Planned and launched a web platform which allows investors to interact with and invest in start-ups of their preference, and startups to display their value to investors.",
+            "Developed front-end and back-end technologies for the web-platform. Designed the user interface using HTML, CSS and PHP and maintained databases with help of MySQL."
+        ],
+        "timeline": "September 2018 \u2013 March 2019"
+    }
+]

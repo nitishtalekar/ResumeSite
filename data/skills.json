@@ -1,0 +1,23 @@
+{
+    "non_technical": [
+        "Leadership",
+        "Project Management",
+        "Teamwork",
+        "Project Planning",
+        "Public Speaking",
+        "Technical Writing"
+    ],
+    "technical": [
+        "Python",
+        "C",
+        "JavaJavascript",
+        "jQuery",
+        "HTML",
+        "CSS",
+        "MySQL",
+        "PHP",
+        "Ajax",
+        "Flask",
+        "Django"
+    ]
+}

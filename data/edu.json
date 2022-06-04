@@ -1,0 +1,34 @@
+[
+    {
+        "university": "North Carolina State University",
+        "location": "USA",
+        "degree": "Master of Computer Science",
+        "timeline": "August 2021 \u2013 Present",
+        "courses": "Automated Learning and Data Analysis, Design and Analysis of Algorithms, Internet Protocols",
+        "gpa": "4.0/4.0"
+    },
+    {
+        "university": "University of Mumbai",
+        "location": "India",
+        "degree": "Bachelor of Computer Engineering",
+        "timeline": "June 2016 \u2013 October 2020",
+        "courses": "Machine Learning, Data Structures, Algorithms,  Operating Systems, Human Machine Interaction, Database Management Systems, Compiler Construction, Computer Organization, Software Engineering",
+        "gpa": "8.96/10.0"
+    },
+    {
+        "university": "Maharashtra State Board",
+        "location": "India",
+        "degree": "Higher Secondary School Certificate",
+        "timeline": "June 2014 \u2013 May 2016",
+        "courses": "Sorftware Science, Hardware Science, Applied Mathematics, Applied Chemistry, Applied Physics",
+        "gpa": "88/100"
+    },
+    {
+        "university": "Maharashtra State Board",
+        "location": "India",
+        "degree": "Secondary School Certificate",
+        "timeline": "July 2002 \u2013 March 2014",
+        "courses": "Science, Mathematics, History, Geography, ICT, English, Hindi, Marathi, Hindi, Sanskrit",
+        "gpa": "94.8/100"
+    }
+]
