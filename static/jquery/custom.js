@@ -57,6 +57,7 @@ $(document).on('click', '#skills-title', function () {
   $("#experiance-title").css('opacity', '0.3');
   $("#skills-title").css('opacity', '1');
 });
+
 $(document).on('click', '.carousel-next', function () {
   var index = $(this).parent().children(".carousel-index").text();
   index2 = (parseInt(index)+1)%2;

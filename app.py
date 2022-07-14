@@ -23,6 +23,12 @@ def index():
     # Main page  
     data = info.ResumeData().createdata()
     return render_template('index.html',data = data)
+    
+@app.route('/admin', methods=['GET'])
+def admin():   
+    # Main page  
+    data = info.ResumeData().createdata()
+    return render_template('admin.html',data = data)
 
 if __name__ == '__main__':
     # app.run(port=5002, debug=True)
