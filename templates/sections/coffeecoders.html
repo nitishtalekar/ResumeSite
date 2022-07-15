@@ -1,41 +1,71 @@
-<div class="section section-description fp-auto-height-responsive about-section" data-section="about">
+<div class="section section-description fp-auto-height-responsive about-section" data-section="coffeecoders">
     <div class="section-wrapper center-vh dir-col anim">
         <div class="section-title text-center">
-            <h2 class="display-4 display-title anim-2 mb-32">Coffee Coders</h2>
+            <h3 class="display-4 display-title anim-2 mb-32">CoffeeCoders</h3>
         </div>
 
         <div class="section-content reduced">
             <div class="row">
               <div class="col-12 col-md-12 mb-4">
-                <div class="row d-flex justify-content-center align-ites-center">
-                  <div class="col-lg-5 col-sm-10 col-md-10 mt-2">
+                <div class="row d-flex justify-content-center align-items-center">
+                  
+                  <div class="col-lg-6 col-12 mt-2 order-lg-2">
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1">
-                                        <img class="img" src="{{ url_for('static', filename=data.coffeecoder) }}" alt="Image">
+                                        <img class="img" src="{{ url_for('static', filename=data.coffeecoders.logo) }}" alt="Image">
                                 </div>
                             </div>
                         </div>
-                  </div>   
+                  </div>
+                  <div class="col-lg-3 col-6 mt-2 order-lg-1">
+                    <div class="">
+                      <div class="images text-center">
+                          <div class="img-avatar-alpha">
+                              <div class="img-1">
+                                      <img class="img" src="{{ url_for('static', filename=data.coffeecoders.nitish_profile) }}" alt="Image">
+                              </div>
+                          </div>
+                      </div>
+                      <center>
+                      <h6 class="display-7 anim-2 text-uppercase">Nitish Talekar</h6>
+                     </center>
+                    </div>  
+                  </div>
+                  <div class="col-lg-3 col-6 mt-2 order-lg-3">
+                    <div class="">
+                      <div class="images text-center">
+                          <div class="img-avatar-alpha">
+                              <div class="img-1">
+                                      <img class="img" src="{{ url_for('static', filename=data.coffeecoders.sarvesh_profile) }}" alt="Image">
+                              </div>
+                          </div>
+                      </div>
+                      <center>
+                      <h6 class="display-7 anim-2 text-uppercase">Sarvesh Wanode</h6>
+                     </center>
+                    </div>  
+                  </div>  
                 </div>
               </div>
-              <div class="col-12 col-md-4 text-left">
+              <div class="col-12 col-md-3 text-left">
                   <div class="title-desc pr-4">
-                    <h3 class="display-6 anim-2">{{data.cc_title}}</h3>
-                    <h4 class="display-6 anim-2">{{data.cc_dob}}</h4>
-                    <h4 class="display-6 anim-2">{{data.cc_age}} Years</h4>
+                    
+                    <!-- <h4 class="display-6 anim-2">{{data.cc_dob}}</h4> -->
+                    <h3 class="display-6 anim-2">{{data.coffeecoders.cc_dob}} Years</h3>
+                    <h2 class="display-6 anim-2">{{data.coffeecoders.projects}} Projects</h2>
                   </div>
               </div>
-              <div class="col-12 col-md-8 text-left mission-border anim-2">
+              <div class="col-12 col-md-9 text-left mission-border anim-2">
                     <div class="title-desc anim-2">
                         <p>
-                          {{data.desc}}
+                          {{data.coffeecoders.cc_desc}}
                         </p>
                     </div>
                     <div class="d-flex justify-content-left mb-2">
-                      <a class="icon-btn resume-btn" href="{{data.resume}}" style="width:100%" target="_blank">
-                          <i class="fa fa-file-text mr-3" aria-hidden="true"></i>
-                          VIEW RESUME
+                      <a class="icon-btn resume-btn" href="{{data.coffeecoders.website}}" style="width:100%" target="_blank">
+                          <i class="fa fa-coffee mr-3" aria-hidden="true"></i>
+                          VISIT WEBSITE
                       </a>
                     </div>
                 </div>

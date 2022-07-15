@@ -3,7 +3,7 @@
   "projects": 3,
   "cc_dob" : "1/12/2019",
   "cc_desc" : "Likh denge koi bhi",
-  "Website" : "http://coffeecoders.pythonanywhere.com/",
-  "nitish_profile" : "link",
-  "sarvesh_profile" : "link_1"
+  "website" : "http://coffeecoders.pythonanywhere.com/",
+  "nitish_profile" : "img/profile.jpg",
+  "sarvesh_profile" : "img/profile.jpg"
 }
