@@ -3,50 +3,54 @@ import json
 
 class ResumeData:
     def __init__(self):
-        self.name = "Nitish Pravin Talekar"
-        self.oneline = "Developer. Engineer. Designer."
-        self.dob = "19th November 1998"
-        self.age = self.calculateAge(date(1998, 11, 19))
-        self.profile = "img/profile.jpg"
-        self.desc_title = "Nitish Talekar"
-        self.resume = "https://drive.google.com/file/d/1K1DvCRH16UCzRhUrGEZA3pmy2aktX1Dj/preview"
-        self.desc = "Software engineer with a desire to learn and adapt to different challenges thrown at him. An individual who believes in being a team player with demonstrated leadership skills. Result oriented, creative minded & solution driven."
+        with open('data/description.json') as json_file:
+            self.data_desc = json.load(json_file)
+        self.name = self.data_desc['name']
+        self.oneline = self.data_desc['oneline']
+        self.dob = self.data_desc['dob']
+        age_date = self.data_desc['age'].split("/")
+        self.age = self.calculateAge(date(int(age_date[2]), int(age_date[1]), int(age_date[0])))
+        self.profile = self.data_desc['profile']
+        self.desc_title = self.data_desc['desc_title']
+        self.resume = self.data_desc['resume']
+        self.desc = self.data_desc['desc']
+
+
         with open('data/edu.json') as json_file:
-            data_edu = json.load(json_file)
-        self.edu = data_edu
+            self.data_edu = json.load(json_file)
+        self.edu = self.data_edu
+
         with open('data/jobs.json') as json_file:
-            data_jobs = json.load(json_file)
-        self.jobs = data_jobs
+            self.data_jobs = json.load(json_file)
+        self.jobs = self.data_jobs
+
         with open('data/projects.json') as json_file:
-            data_projects = json.load(json_file)
-        self.projects = data_projects
+            self.data_projects = json.load(json_file)
+        self.projects = self.data_projects
+
         with open('data/publish.json') as json_file:
-            data_publish = json.load(json_file)
-        self.publish = data_publish
+            self.data_publish = json.load(json_file)
+        self.publish = self.data_publish
+
         with open('data/exp.json') as json_file:
-            data_exp = json.load(json_file)
-        self.exp = data_exp
+            self.data_exp = json.load(json_file)
+        self.exp = self.data_exp
+
         with open('data/artwork.json') as json_file:
-            data_artwork = json.load(json_file)
-        self.artwork = data_artwork
+            self.data_artwork = json.load(json_file)
+        self.artwork = self.data_artwork
+
         with open('data/skills.json') as json_file:
-            data_skills = json.load(json_file)
-        self.skills = data_skills
-        self.email = [
-            "ntaleka@ncsu.edu",
-            "nitishtalekar.nt503@gmail.com"
-        ]
-        self.phone = [
-            "+1 (919) 349 8823"
-        ]
-        self.address = [
-            "3802 Lexington Dr.",
-            "Apt G",
-            "Raleigh NC 27606"
-        ]
+            self.data_skills = json.load(json_file)
+        self.skills = self.data_skills
+
+        self.email = self.data_desc['email']
+        self.phone = self.data_desc['phone']
+        self.address = self.data_desc['address']
+
         with open('data/links.json') as json_file:
-            data_links = json.load(json_file)
-        self.links = data_links
+            self.data_links = json.load(json_file)
+        self.links = self.data_links
 
     def createdata(self):
         resumedata = {
@@ -70,6 +74,20 @@ class ResumeData:
             "exp"           : self.divide(self.exp,4),
             "publish"       : self.publish,
             "email"         : self.email
+        }
+        return resumedata
+
+    def editdata(self):
+        resumedata = {
+            "data_description"      : self.data_desc,
+            "data_artwork"          : self.data_artwork,
+            "data_edu"              : self.data_edu,
+            "data_exp"              : self.data_exp,
+            "data_jobs"             : self.data_jobs,
+            "data_links"            : self.data_links,
+            "data_projects"         : self.data_projects,
+            "data_publish"          : self.data_publish,
+            "data_skills"           : self.data_skills
         }
         return resumedata
 

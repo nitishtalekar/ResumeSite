@@ -5,6 +5,7 @@ import os
 import glob
 import re
 import numpy as np
+import json
 
 # Flask utils
 from flask import Flask, redirect, url_for, request, render_template
@@ -19,16 +20,24 @@ print('Check http://127.0.0.1:5000/')
 
 
 @app.route('/', methods=['GET'])
-def index():   
-    # Main page  
+def index():
+    # Main page
     data = info.ResumeData().createdata()
     return render_template('index.html',data = data)
-    
-@app.route('/admin', methods=['GET'])
-def admin():   
-    # Main page  
+
+@app.route('/admin', methods=['GET', 'POST'])
+def admin():
+    # Main page
+    if request.method == "POST":
+        form_title = request.form["button"]
+        form_data = request.form[form_title]
+        print(form_title, form_data, type(form_data))
+
+    data_edit = info.ResumeData().editdata()
     data = info.ResumeData().createdata()
-    return render_template('admin.html',data = data)
+    # print(data, list(data.keys()))
+    
+    return render_template('admin.html',data = data, data_edit = data_edit)
 
 if __name__ == '__main__':
     # app.run(port=5002, debug=True)

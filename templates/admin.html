@@ -6,9 +6,18 @@
     <meta name="description" content="Resume Website">
     <meta name="keywords" content="agency, bootstrap, business, company, corporate, creative, clean, modern, multipurpose, onepage, personal, portfolio, professional, responsive, minimal">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
-    
-    {% include 'elements/imports.html' %} 
-    
+
+    {% include 'elements/imports.html' %}
+    <script src="{{ url_for('static', filename='jquery/admin.js')}}"></script>
+    <script type="text/javascript">
+    (function() {
+      var element = document.getElementById("json");
+      var obj = JSON.parse(element.innerText);
+      console.log("oooooo");
+      element.innerHTML = JSON.stringify(obj, undefined, 2);
+  })();
+    </script>
+
 </head>
 
 <body id="menu" class="body-page">
@@ -17,14 +26,8 @@
 <![endif]-->
 
 <!-- Page Loader -->
-<div class="pageloader" id="pageloader">
-    <div>
-        <div class="icon ion-spin"></div>
-    </div>
-</div>
 
 <!-- Start Header -->
-{% include 'elements/header.html' %} 
 <!-- End Header -->
 
 <!-- Start Cover -->
@@ -34,18 +37,15 @@
 <!--End Cover -->
 
 <!-- Start Content -->
-<main class="page-main page-fullpage main-anim" id="mainpage">
+<form action="" method="post" name="movie_edit">
+  {% for key,value in data_edit.items() %}
+  {{key}}
+  <pre id="json"><textarea name="{{key}}" rows="10" cols="200">{{value}}</textarea></pre>
+  <button type="submit" name="button", value="{{key}}">Submit</button>
+    <br>
+  {%endfor%}
+</form>
 
 
-
-</main>
-<!-- End Content -->
-
-<!-- Start Footer -->
-{% include 'elements/footer.html' %}
-<!-- End Footer  -->
-
-<!-- Scripts -->
-{% include 'elements/imports2.html' %}
 </body>
 </html>
