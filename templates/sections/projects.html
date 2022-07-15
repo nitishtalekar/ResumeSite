@@ -32,28 +32,28 @@
                                                           </div>
                                                           <span class="proj-desc d-none">{{pr.desc}}</span>
                                                           <span class="proj-timeline d-none">{{pr.timeline}}</span>
-                                                          <span class="proj-git d-none">{{pr.github}}</span>
-                                                          <span class="proj-link d-none">{{pr.link}}</span>
+                                                          <span class="proj-git d-none" >{{pr.github}}</span>
+                                                          <span class="proj-link d-none" title="Link">{{pr.link}}</span>
                                                       </div>
                                                   </div>
                                               </div>
                                           </div>
                                           <div class="icons text-right">
                                             {% if pr.link != "" %}
-                                              <a class="icon-btn" href="{{pr.link}}" target="_blank">
+                                              <a class="icon-btn" href="{{pr.link}}" target="_blank" title="Link to Project">
                                                   <i class="fa fa-link" aria-hidden="true"></i>
                                               </a>
                                             {% else %}
-                                            <a class="icon-btn" style="opacity:0.3">
+                                            <a class="icon-btn" style="opacity:0.3" title="Link to Project">
                                                 <i class="fa fa-link" aria-hidden="true"></i>
                                             </a>
                                             {% endif %}
                                             {% if pr.github != "" %}
-                                              <a class="icon-btn" href="{{pr.github}}" target="_blank">
+                                              <a class="icon-btn" href="{{pr.github}}" target="_blank" title="Github Repository">
                                                   <i class="fa fa-code-fork" aria-hidden="true"></i>
                                               </a>
                                             {% else %}
-                                              <a class="icon-btn" style="opacity:0.3">
+                                              <a class="icon-btn" style="opacity:0.3" title="Github Repository">
                                                   <i class="fa fa-code-fork" aria-hidden="true"></i>
                                               </a>
                                             {% endif %}
