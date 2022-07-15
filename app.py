@@ -30,8 +30,11 @@ def admin():
     # Main page
     if request.method == "POST":
         form_title = request.form["button"]
-        form_data = json.loads(request.form[form_title])
-        print(form_title, form_data, type(form_data))
+        form_data = json.loads(request.form[form_title].replace("\'", "\""))
+        final_data = json.dumps(form_data, indent=4)
+        file_name = "data/" + form_title.split("_")[-1] + ".json"
+        with open(file_name, "w") as outfile:
+            outfile.write(final_data)
 
     data_edit = info.ResumeData().editdata()
     data = info.ResumeData().createdata()

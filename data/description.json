@@ -1,22 +1,22 @@
 {
-  "name" : "Nitish Pravin Talekar",
-  "oneline" : "Developer. Engineer. Designer.",
-  "dob" : "19th November 1998",
-  "age" : "19/11/1998",
-  "profile" : "img/profile.jpg",
-  "desc_title" : "Nitish Talekar",
-  "resume" : "https://drive.google.com/file/d/1K1DvCRH16UCzRhUrGEZA3pmy2aktX1Dj/preview",
-  "desc" : "Software engineer with a desire to learn and adapt to different challenges thrown at him. An individual who believes in being a team player with demonstrated leadership skills. Result oriented, creative minded & solution driven.",
-  "email" : [
-          "ntaleka@ncsu.edu",
-          "nitishtalekar.nt503@gmail.com"
-      ],
-  "phone" : [
-          "+1 (919) 349 8823"
-      ],
-  "address" : [
-          "3802 Lexington Dr.",
-          "Apt G",
-          "Raleigh NC 27606"
-      ]
+    "name": "Nitish Pravin Talekar",
+    "oneline": "Developer. Engineer. Designer.",
+    "dob": "19th November 1998",
+    "age": "19/11/1998",
+    "profile": "img/profile.jpg",
+    "desc_title": "Nitish Talekar",
+    "resume": "https://drive.google.com/file/d/1K1DvCRH16UCzRhUrGEZA3pmy2aktX1Dj/preview",
+    "desc": "Software engineer with a desire to learn and adapt to different challenges thrown at him. An individual who believes in being a team player with demonstrated leadership skills. Result oriented, creative minded & solution driven.",
+    "email": [
+        "ntaleka@ncsu.edu",
+        "nitishtalekar.nt503@gmail.com"
+    ],
+    "phone": [
+        "+1 (919) 349 8823"
+    ],
+    "address": [
+        "3802 Lexington Dr.",
+        "Apt G",
+        "Raleigh NC 27606"
+    ]
 }
