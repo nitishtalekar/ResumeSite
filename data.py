@@ -22,6 +22,8 @@ class ResumeData:
 
         with open('data/coffeecoders.json') as json_file:
             self.data_coffeecoders = json.load(json_file)
+            age_cc_date = self.data_coffeecoders['cc_dob'].split("/")
+            self.data_coffeecoders['cc_dob'] = self.calculateAge(date(int(age_cc_date[2]), int(age_cc_date[1]), int(age_cc_date[0])))
         self.coffeecoders = self.data_coffeecoders
 
         with open('data/jobs.json') as json_file:
