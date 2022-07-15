@@ -20,6 +20,10 @@ class ResumeData:
             self.data_edu = json.load(json_file)
         self.edu = self.data_edu
 
+        with open('data/coffeecoders.json') as json_file:
+            self.data_coffeecoders = json.load(json_file)
+        self.coffeecoders = self.data_coffeecoders
+
         with open('data/jobs.json') as json_file:
             self.data_jobs = json.load(json_file)
         self.jobs = self.data_jobs
@@ -73,7 +77,8 @@ class ResumeData:
             "edu"           : self.divide(self.edu,2),
             "exp"           : self.divide(self.exp,4),
             "publish"       : self.publish,
-            "email"         : self.email
+            "email"         : self.email,
+            "coffeecoders"  : self.coffeecoders
         }
         return resumedata
 
@@ -87,7 +92,8 @@ class ResumeData:
             "data_links"            : self.data_links,
             "data_projects"         : self.data_projects,
             "data_publish"          : self.data_publish,
-            "data_skills"           : self.data_skills
+            "data_skills"           : self.data_skills,
+            "data_coffeecoders"     : self.coffeecoders
         }
         return resumedata
 

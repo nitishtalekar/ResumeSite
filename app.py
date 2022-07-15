@@ -30,13 +30,13 @@ def admin():
     # Main page
     if request.method == "POST":
         form_title = request.form["button"]
-        form_data = request.form[form_title]
+        form_data = json.loads(request.form[form_title])
         print(form_title, form_data, type(form_data))
 
     data_edit = info.ResumeData().editdata()
     data = info.ResumeData().createdata()
     # print(data, list(data.keys()))
-    
+
     return render_template('admin.html',data = data, data_edit = data_edit)
 
 if __name__ == '__main__':
