@@ -1,0 +1,75 @@
+
+
+{% for project in data.proj_list %}
+
+<div class="section section-description fp-auto-height-responsive about-section" data-section="proj_{{project.srno}}">
+    <div class="section-wrapper center-vh dir-col anim">
+        <div class="text-center">
+            <h2 class="display-4 display-title anim-2 mb-32">{{project.name}}</h2>
+        </div>
+
+        <div class="section-content reduced">
+            <div class="row">
+              <div class="col-12 col-md-5 text-left">
+                <div class="images text-center">
+                    <div class="img-avatar-alpha">
+                        <div class="img-1">
+                                <img class="img" src="{{ url_for('static', filename=project.img) }}" alt="Image">
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-7 text-left mission-border anim-2 d-flex justify-content-center align-items-center">
+                <div class="">
+                  <div class="title-desc anim-2">
+                    <h2 class="text-uppercase">{{project.topic}}</h2>
+                    <h5>{{project.lang}}</h5>
+                    
+                    <h5 class="mb-4">{{project.timeline}}</h5>
+                      <p>
+                        {{project.desc}}
+                      </p>
+                  </div>
+                  <div class="row">
+                    {% if project.github != "" %}
+                    <div class="col-12 col-lg-6">
+                      <div class="d-flex justify-content-left mb-2">
+                        <a class="icon-btn resume-btn" href="{{project.github}}" style="width:100%" target="_blank">
+                            <i class="fa fa-code mr-3" aria-hidden="true"></i>
+                            GITHUB REPOSITORY
+                        </a>
+                      </div>
+                    </div>
+                    {% endif %}
+                    {% if project.link != "" %}
+                    <div class="col-12 col-lg-6">
+                      <div class="d-flex justify-content-left mb-2">
+                        <a class="icon-btn resume-btn" href="{{project.link}}" style="width:100%" target="_blank">
+                            <i class="fa fa-globe mr-3" aria-hidden="true"></i>
+                            WEBSITE LINK
+                        </a>
+                      </div>
+                    </div>
+                    {% endif %}
+                  </div>
+                  
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        {% if (loop.index0 + 1) != data.proj_list|length %}
+
+        <footer class="section-footer scrolldown">
+            <a class="down">
+                <span class="icon"></span>
+                <span class="txt">Next Project</span>
+            </a>
+        </footer>
+        {% endif %}
+        
+    </div>
+</div>
+
+{% endfor %}
+

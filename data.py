@@ -75,6 +75,7 @@ class ResumeData:
             "tskills"       : self.divide(self.skills["technical"],(len(self.skills["technical"])+1)//2),
             "ntskills"      : self.divide(self.skills["non_technical"],(len(self.skills["non_technical"])+1)//2),
             "projects"      : self.divide(self.projects,3),
+            "proj_list"     : self.projects,
             "artwork"       : self.artwork,
             "edu"           : self.divide(self.edu,2),
             "exp"           : self.divide(self.exp,4),

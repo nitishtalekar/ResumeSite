@@ -108,20 +108,6 @@ $(document).on('click', '.artwork', function () {
 
 $(document).on('click', '.project', function () {
   // console.log("HELLO");
-  $("#project-git").show();
-  $("#project-link").show()
-  $("#project-name").text($(this).children().children().children(".proj-name").text());
-  $("#project-topic").text($(this).children().children().children(".proj-topic").text());
-  $("#project-timeline").text($(this).children().children(".proj-timeline").text());
-  $("#project-desc").text($(this).children().children(".proj-desc").text());
-  $("#project-lang").text($(this).children().children().children(".proj-lang").text());
-  $("#project-git").attr("href",$(this).children().children(".proj-git").text());
-  $("#project-link").attr("href",$(this).children().children(".proj-link").text());
-  if($(this).children().children(".proj-git").text() == ""){
-    $("#project-git").hide();
-  }
-  if($(this).children().children(".proj-link").text() == ""){
-    $("#project-link").hide();
-  }
-  $("#projectmodal").modal("show");
+  var srno = $(this).children().children(".proj-number").text()
+  window.open('/projects#'+srno, '_blank');
 });

@@ -24,6 +24,12 @@ def index():
     # Main page
     data = info.ResumeData().createdata()
     return render_template('index.html',data = data)
+    
+@app.route('/projects', methods=['GET'])
+def project():
+    # Main page
+    data = info.ResumeData().createdata()
+    return render_template('projects.html',data = data)
 
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():

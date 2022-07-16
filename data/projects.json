@@ -1,5 +1,6 @@
 [
     {
+        "srno": "1",
         "name": "Peer-to-Peer File System",
         "topic": "Socket Programming",
         "timeline": "November 2021",
@@ -10,6 +11,7 @@
         "lang": "Python, Socket Programming"
     },
     {
+        "srno": "2",
         "name": "Prediction of Rainfall",
         "topic": "Machine Learning",
         "timeline": "November 2021",
@@ -20,6 +22,7 @@
         "lang": "Python, Sci-Kit learn, Tensorflow"
     },
     {
+        "srno": "3",
         "name": "Japanese - English Translator",
         "topic": "Natural Language Processsing",
         "timeline": "March 2020",
@@ -30,6 +33,7 @@
         "lang": "Python, Sci-Kit learn, Tensorflow"
     },
     {
+        "srno": "4",
         "name": "Predictive Model Comparator Platform",
         "topic": "Machine Learning",
         "timeline": "June 2020",
@@ -40,6 +44,7 @@
         "lang": "Python, Django, Sci-Kit learn, Tensorflow"
     },
     {
+        "srno": "5",
         "name": "Institute Feedback System",
         "topic": "Web Development",
         "timeline": "April 2020",
@@ -50,6 +55,7 @@
         "lang": "PHP, JavaScript, HTML, Ajax"
     },
     {
+        "srno": "6",
         "name": "Crop Disease Detection and Diagnosis",
         "topic": "Deep Learning",
         "timeline": "March 2020",
@@ -60,6 +66,7 @@
         "lang": "Python, Tensorflow, Keras"
     },
     {
+        "srno": "7",
         "name": "Result Analysis",
         "topic": "Data Analysis",
         "timeline": "July 2019",
@@ -70,6 +77,7 @@
         "lang": "Python, Pandas, Numpy, Tkinter"
     },
     {
+        "srno": "8",
         "name": "Chess Engine",
         "topic": "Machine Learning",
         "timeline": "March 2019",

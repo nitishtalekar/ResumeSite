@@ -9,12 +9,6 @@
     
     {% include 'elements/imports.html' %} 
     
-    <script type="text/javascript">
-    window.onload = function() {
-        document.location.hash = "";
-    }
-    </script>
-    
 </head>
 
 <body id="menu" class="body-page">
@@ -29,10 +23,8 @@
     </div>
 </div>
 
-{% include 'sections/modals.html' %}
-
 <!-- Start Header -->
-{% include 'elements/header.html' %} 
+{% include 'elements/header2.html' %} 
 <!-- End Header -->
 
 <!-- Start Cover -->
@@ -43,27 +35,10 @@
 
 <!-- Start Content -->
 <main class="page-main page-fullpage main-anim" id="mainpage">
-    {% include 'sections/landing.html' %}
 
     <!-- Start About -->
-    {% include 'sections/about.html' %}
+    {% include 'pages/project_list.html' %}
     <!-- End About -->
-
-    <!-- Start Experiance -->
-    {% include 'sections/experiance.html' %}
-    <!-- End Experiance -->
-
-    <!-- Start Project -->
-    {% include 'sections/projects.html' %}
-    <!-- End Project -->
-
-    <!-- Start Artwork -->
-    {% include 'sections/artwork.html' %}
-    <!-- End Artwork -->
-
-    <!-- Start Contact -->
-    {% include 'sections/contact.html' %}
-    <!-- End Contact -->
 
 </main>
 <!-- End Content -->
