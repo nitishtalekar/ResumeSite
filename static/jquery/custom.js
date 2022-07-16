@@ -99,15 +99,9 @@ $(document).on('click', '.carousel-next', function () {
   }
 });
 
-$(document).on('click', '.artwork', function () {
-  // console.log("HELLO");
-  $("#artwork-name").text($(this).children(".art-name").text() + " - " + $(this).children(".art-date").text());
-  $("#artwork-img").attr("src",$(this).children(".art-src").text());
-  $("#artworkmodal").modal("show");
-});
-
-$(document).on('click', '.project', function () {
-  // console.log("HELLO");
-  var srno = $(this).children().children(".proj-number").text()
-  window.open('/projects#'+srno, '_blank');
-});
+// $(document).on('click', '.artwork', function () {
+//   // console.log("HELLO");
+//   $("#artwork-name").text($(this).children(".art-name").text() + " - " + $(this).children(".art-date").text());
+//   $("#artwork-img").attr("src",$(this).children(".art-src").text());
+//   $("#artworkmodal").modal("show");
+// });

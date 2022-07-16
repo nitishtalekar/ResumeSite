@@ -27,9 +27,15 @@ def index():
     
 @app.route('/projects', methods=['GET'])
 def project():
-    # Main page
+    # Project page
     data = info.ResumeData().createdata()
-    return render_template('projects.html',data = data)
+    return render_template('projects.html',data = data, pagename = 'Projects', init = 'proj_'+str(len(data['proj_list'])))
+    
+@app.route('/artworks', methods=['GET'])
+def artwork():
+    # Artwork page
+    data = info.ResumeData().createdata()
+    return render_template('artworks.html',data = data, pagename = 'Artworks', init = 'art_'+str(len(data['artwork'])))
 
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():

@@ -13,10 +13,9 @@
                             <div class="illustr">
                                 <img class="img art-img" src="{{ url_for('static', filename=art.img) }}" alt="Image">
                             </div>
-                            <a class="legend artwork" style="width:100%">
+                            <a href="/artworks#art_{{art.srno}}" class="legend artwork" style="width:100%">
                                 <h2 class="display-4 art-name">{{art.name}}</h2>
                                 <p class="art-date">{{art.date}}</p>
-                                <span class="art-src d-none">{{ url_for('static', filename=art.img) }}</span>
                             </a>
                         </div>
                     </li>

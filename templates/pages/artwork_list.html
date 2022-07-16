@@ -1,0 +1,65 @@
+
+
+{% for art in data.artwork %}
+
+<div class="section section-description fp-auto-height-responsive about-section" data-section="art_{{art.srno}}">
+    <div class="section-wrapper center-vh dir-col anim">
+
+        {% if (loop.index0 % 2) == 0 %}
+        <div class="section-content reduced">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-12 col-lg-6 text-left">
+                  <div class="images text-center">
+                      <div class="img-avatar-alpha">
+                          <div class="img-1">
+                                  <img class="img" src="{{ url_for('static', filename=art.img) }}" alt="Image">
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="title-desc anim-2">
+                  <h1 class="text-uppercase">{{art.name}}</h1>
+                    <h3>
+                      {{art.date}}
+                    </h3>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="section-content reduced">
+            <div class="row d-flex justify-content-center align-items-center">
+              <div class="title-desc anim-2 text-right">
+                <h1 class="text-uppercase">{{art.name}}</h1>
+                  <h3>
+                    {{art.date}}
+                  </h3>
+              </div>
+              <div class="col-12 col-lg-6 ">
+                  <div class="images text-center">
+                      <div class="img-avatar-alpha">
+                          <div class="img-1">
+                                  <img class="img" src="{{ url_for('static', filename=art.img) }}" alt="Image">
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+        {% endif %}
+        
+        {% if (loop.index0 + 1) != data.artwork|length %}
+
+        <footer class="section-footer scrolldown">
+            <a class="down">
+                <span class="icon"></span>
+                <span class="txt">Next Artwork</span>
+            </a>
+        </footer>
+        {% endif %}
+        
+    </div>
+</div>
+
+{% endfor %}
+
