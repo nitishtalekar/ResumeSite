@@ -50,8 +50,8 @@ def admin():
 
     data_edit = info.ResumeData().editdata()
     data = info.ResumeData().createdata()
-    # print(data, list(data.keys()))
-
+    for key in data_edit:
+        data_edit[key] = json.dumps(data_edit[key], indent = 4)
     return render_template('admin.html',data = data, data_edit = data_edit)
 
 if __name__ == '__main__':

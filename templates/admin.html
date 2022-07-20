@@ -8,15 +8,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
 
     {% include 'elements/imports.html' %}
+    
     <script src="{{ url_for('static', filename='jquery/admin.js')}}"></script>
-    <script type="text/javascript">
-    (function() {
-      var element = document.getElementById("json");
-      var obj = JSON.parse(element.innerText);
-      console.log("oooooo");
-      element.innerHTML = JSON.stringify(obj, undefined, 2);
-  })();
-    </script>
 
 </head>
 
@@ -28,6 +21,7 @@
 <!-- Page Loader -->
 
 <!-- Start Header -->
+{% include 'elements/header2.html' %} 
 <!-- End Header -->
 
 <!-- Start Cover -->
@@ -37,14 +31,53 @@
 <!--End Cover -->
 
 <!-- Start Content -->
-<form action="" method="post" name="movie_edit">
-  {% for key,value in data_edit.items() %}
-  {{key}}
-  <pre id="json"><textarea name="{{key}}" rows="10" cols="200">{{value}}</textarea></pre>
-  <button type="submit" name="button", value="{{key}}">Submit</button>
-    <br>
-  {%endfor%}
-</form>
+<div class="">
+  
+</div>
+<div class="container mt-5 pt-5">
+      <form action="" method="post" name="movie_edit">
+        {% for key,value in data_edit.items() %}
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+        <h5 class="text-uppercase">{{key}}</h5>
+          </div>
+      <div class="col-12 d-flex justify-content-center">
+        <textarea class="jsons{{loop.index0}}" name='{{key}}' rows="15" cols="100">{{value}}</textarea>
+      </div>
+      <div class="col-12 d-flex justify-content-center mb-5">
+        <button type="submit" name="button", value="{{key}}">Submit</button>
+        </div> 
+        </div>
+        {% endfor %}
+      </form>
+</div>
+
+<!-- <hr>
+
+<div class="container mt-5 pt-5">
+  <form action="" method="post" name="movie_edit">
+    {% for key,value in data_edit.items() %}
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+    <h5 class="text-uppercase">{{key}}</h5>
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+    <textarea class="jsons{{loop.index0}}" name='{{key}}' rows="10" cols="100">{{value}}</textarea>
+  </div>
+  <div class="col-12 d-flex justify-content-center mb-5">
+    <button type="submit" name="button", value="{{key}}">Submit</button>
+      <br>
+    </div> 
+    </div>
+    {% endfor %}
+  </form>
+</div> -->
+
+
+
+
+
+
 
 
 </body>
