@@ -1,38 +1,38 @@
 [
     {
         "srno": "6",
-        "name": "Dive",
-        "date": "2019",
-        "img": "art/dive.png"
+        "name": "Howl",
+        "date": "2022",
+        "img": "11BY7FWNXVlWNcGBLd8nHRcMwPw3h35Nu"
     },
     {
         "srno": "5",
         "name": "Galaxy",
         "date": "2019",
-        "img": "art/galaxy.png"
+        "img": "https://drive.google.com/file/d/1Sb3zCxzbmE-QTBU-8X9-DGPfGjW2Ev9h/preview"
     },
     {
         "srno": "4",
         "name": "Nebula",
         "date": "2020",
-        "img": "art/nebula.png"
+        "img": "https://drive.google.com/file/d/1Sb3zCxzbmE-QTBU-8X9-DGPfGjW2Ev9h/preview"
     },
     {
         "srno": "3",
         "name": "Nebula",
         "date": "2020",
-        "img": "art/nebula.png"
+        "img": "https://drive.google.com/file/d/1Sb3zCxzbmE-QTBU-8X9-DGPfGjW2Ev9h/preview"
     },
     {
         "srno": "2",
         "name": "Nebula",
         "date": "2020",
-        "img": "art/nebula.png"
+        "img": "https://drive.google.com/file/d/1Sb3zCxzbmE-QTBU-8X9-DGPfGjW2Ev9h/preview"
     },
     {
         "srno": "1",
         "name": "Nebula",
         "date": "2020",
-        "img": "art/nebula.png"
+        "img": "https://drive.google.com/file/d/1Sb3zCxzbmE-QTBU-8X9-DGPfGjW2Ev9h/preview"
     }
 ]

@@ -11,7 +11,8 @@
                     <li class="slide-item swiper-slide art-slide">
                         <div class="item-wrapper">
                             <div class="illustr">
-                                <img class="img art-img" src="{{ url_for('static', filename=art.img) }}" alt="Image">
+                                <!-- <img class="img art-img" src="{{ url_for('static', filename=art.img) }}" alt="Image"> -->
+                                <img class="img art-img" src="http://drive.google.com/uc?export=view&id={{ art.img }}" alt="Image">
                             </div>
                             <a href="/artworks#art_{{art.srno}}" class="legend artwork" style="width:100%" target="_blank">
                                 <h2 class="display-4 art-name">{{art.name}}</h2>
