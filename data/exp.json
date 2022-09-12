@@ -1,26 +1,26 @@
 [
     {
         "position": "Founder",
-        "commitee": "CodeCell RGIT",
-        "desc": "Founded Code Cell \u2013 a community of project developers and coding enthusiasts, with the participation of over 200 students. Organized City-level hackathon. Conducted seminars.",
-        "timeline": "2019 - 2020"
+        "commiitee": "CodeCell RGIT",
+        "timeline": "2019 - 2020",
+        "desc": "Founded Code Cell - a community of project developers and coding enthusiasts, with the participation of over 200 students. Organized City-level hackathon. Conducted seminars."
     },
     {
         "position": "Lead Developer",
-        "commitee": "Software Development Committee",
-        "desc": "Lead cross functional teams on various software projects that helped the management and administration departments of the institution.",
-        "timeline": "2019 - 2020"
+        "commiitee": "Software Development Committee",
+        "timeline": "2019 - 2020",
+        "desc": "Lead cross functional teams on various software projects that helped the management and administration departments of the institution."
     },
     {
         "position": "Editorial Secretary",
-        "commitee": "ACM, CESS",
-        "desc": "Managed database and documents for the standing committee. Edited and published monthly Newsletter and yearly Magazine.",
-        "timeline": "2018 - 2020"
+        "commiitee": "ACM, CESS",
+        "timeline": "2018 - 2020",
+        "desc": "Managed database and documents for the standing committee. Edited and published monthly Newsletter and yearly Magazine."
     },
     {
         "position": "Technical Secretary",
-        "commitee": "Student Council",
-        "desc": "Organized Technical inter-collegiate festival with a footfall of over 2000 participants. Supervised several technical workshops.",
-        "timeline": "2018 - 2020"
+        "commiitee": "Student Council",
+        "timeline": "2018 - 2020",
+        "desc": "Organized Technical inter-collegiate festival with a footfall of over 2000 participants. Supervised several technical workshops."
     }
 ]

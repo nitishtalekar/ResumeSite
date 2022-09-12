@@ -50,9 +50,16 @@ def admin():
             file_name = "data/" + form_title.split("_")[-1] + ".json"
             with open(file_name, "w") as outfile:
                 outfile.write(final_data)
-        elif 'load' in request.form:
-            load.LoadData().load_all()
-            print("YES")
+        elif 'load_jobs' in request.form:
+            load.LoadData().load_jobs()
+        elif 'load_exp' in request.form:
+            load.LoadData().load_exp()
+        elif 'load_edu' in request.form:
+            load.LoadData().load_edu()
+        elif 'load_projects' in request.form:
+            load.LoadData().load_projects()
+        elif 'load_art' in request.form:
+            load.LoadData().load_art()
             
 
     data_edit = info.ResumeData().editdata()
