@@ -1,22 +1,54 @@
 [
     {
-        "title": "Developer",
+        "title": "Instructor",
+        "title2": "Assistant Instructor",
+        "company": "NC State AI Academy",
+        "timeline": "April 2022 - Present",
+        "desc": [
+            "Instructed 5-week Human Computer Interaction course at the academy, including hands-on workshops.",
+            "Remodeled Python course curriculum and redesigned workshop material to inculcate supplemental content.",
+            "Assisted in Artificial Intelligence and Machine Learning workshops as a mentor personnel for more than 70 students."
+        ]
+    },
+    {
+        "title": "Intern",
+        "title2": "Full Stack Development",
+        "company": "Innovative Education Lab",
+        "timeline": "February 2022 - July 2022",
+        "desc": [
+            "Revamped an Adaptive Learning Platform based on OpenEdx using Django and incorporated custom built algorithms and applications using SpringBoot.",
+            "Standardized development documentation and streamlined installation and reboot processes on existing lab servers.\n"
+        ]
+    },
+    {
+        "title": "Instructor",
+        "title2": "Graduate Teaching Assistant",
+        "company": "North Carolina State University",
+        "timeline": "January 2022 - May 2022",
+        "desc": [
+            "Redesigned course curriculum and streamlined the flow of class for the Human Computer Interaction (HCI) course for Spring 22.",
+            "Incorporated web development and data analysis software to build attendance and grading systems that catered to the course requirements for over 100 students, the systems are currently operational.\n"
+        ]
+    },
+    {
+        "title": "Software Developer",
         "title2": "Front End",
         "company": "Depronto Infotech ",
+        "timeline": "October 2020 \u2013 March 2021",
         "desc": [
-            "Designed user interface for online platform geared towards automating reward systems for insurance agents at HDFC Bank branches. Front-end functionalities were generated using JavaScript, Ajax, and jQuery.",
-            "Assisted in developing mailing interface directed towards broadcasting notices to Axis bank employees via the web-platform."
-        ],
-        "timeline": "October 2020 \u2013 March 2021"
+            "Designed user interface for online platform geared towards developing Key Performance Indicators for insurance agents at a reputed client Bank and its branches.",
+            "Generated Front-end functionalities using JavaScript, Ajax, and jQuery.",
+            "Refined the mailing interface directed towards broadcasting notices to client bank employees via the respective web-platform."
+        ]
     },
     {
         "title": "Intern",
         "title2": "Technology Developer",
         "company": "Naman Angels India Foundation",
+        "timeline": "September 2018 - March 2019",
         "desc": [
             "Planned and launched a web platform which allows investors to interact with and invest in start-ups of their preference, and startups to display their value to investors.",
             "Developed front-end and back-end technologies for the web-platform. Designed the user interface using HTML, CSS and PHP and maintained databases with help of MySQL."
-        ],
-        "timeline": "September 2018 \u2013 March 2019"
+        ]
     }
 ]

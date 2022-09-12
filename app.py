@@ -13,6 +13,7 @@ from werkzeug.utils import secure_filename
 from gevent.pywsgi import WSGIServer
 
 import data as info
+import loaddb as load
 
 app = Flask(__name__)
 
@@ -41,12 +42,18 @@ def artwork():
 def admin():
     # Main page
     if request.method == "POST":
-        form_title = request.form["button"]
-        form_data = json.loads(request.form[form_title].replace("\'", "\""))
-        final_data = json.dumps(form_data, indent=4)
-        file_name = "data/" + form_title.split("_")[-1] + ".json"
-        with open(file_name, "w") as outfile:
-            outfile.write(final_data)
+        # print(request.form["action"])
+        if 'submit' in request.form:
+            form_title = request.form["submit"]
+            form_data = json.loads(request.form[form_title].replace("\'", "\""))
+            final_data = json.dumps(form_data, indent=4)
+            file_name = "data/" + form_title.split("_")[-1] + ".json"
+            with open(file_name, "w") as outfile:
+                outfile.write(final_data)
+        elif 'load' in request.form:
+            load.LoadData().load_all()
+            print("YES")
+            
 
     data_edit = info.ResumeData().editdata()
     data = info.ResumeData().createdata()

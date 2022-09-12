@@ -35,6 +35,19 @@
   
 </div>
 <div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center mb-5">
+      <h1 class="text-light text-uppercase">ADMIN</h1>
+    </div>
+  </div>
+  <form action="" method="post" name="load_data">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center mb-5">
+        <button style="" class="btn-submit" type="submit" name="load">Load Cloud Data</button>
+      </div>
+    </div>
+  </form>
+  <hr class="bg-white mb-5">
       <form action="" method="post" name="movie_edit">
         {% for key,value in data_edit.items() %}
         <div class="row">
@@ -44,8 +57,8 @@
       <div class="col-12 d-flex justify-content-center">
         <textarea class="jsons{{loop.index0}}" name='{{key}}' rows="15" cols="100">{{value}}</textarea>
       </div>
-      <div class="col-12 d-flex justify-content-center mb-5">
-        <button type="submit" name="button", value="{{key}}">Submit</button>
+      <div class="col-12 d-flex justify-content-center mb-5 mt-4">
+        <button class="btn-submit" type="submit" name="submit" value="{{key}}">Submit</button>
         </div> 
         </div>
         {% endfor %}

@@ -1,5 +1,6 @@
 $(document).ready(function() {
     console.log( "NitishPravinTalekar");
+    console.log("HELLO");
     $("#experiance-title").css('opacity', '1');
     $("#experiance-title").removeClass("display-6");
     $("#experiance-title").addClass("display-4");
@@ -86,8 +87,9 @@ $(document).on('click', '#skills-title', function () {
 
 $(document).on('click', '.carousel-next', function () {
   var index = $(this).parent().children(".carousel-index").text();
-  index2 = (parseInt(index)+1)%2;
   var id = $(this).parent().children(".carousel-name").text();
+  l = $('.'+id+"-carousel").length
+  index2 = (parseInt(index)+1)%(l);
   if($("#"+id+"_"+index2).length){
     $("#"+id+"_"+index).fadeOut("fast",function(){
       $("#"+id+"_"+index2).fadeIn("fast")
