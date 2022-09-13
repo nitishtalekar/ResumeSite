@@ -83,7 +83,7 @@ def adminpage():
 
 if __name__ == '__main__':
     app = Flask(__name__)
-    app.secret_key = 'nitish503'
+    app.config['SECRET_KEY'] = 'nitish503'
     app.debug = True
     # Session(app)
     # Serve the app with gevent
