@@ -83,12 +83,8 @@ def adminpage():
 
 if __name__ == '__main__':
     # app.run(port=5002, debug=True)
-    app.config['SECRET_KEY'] = "somekey"
-    app.config['SESSION_TYPE'] = 'filesystem'
-    app.config['SESSION_PERMANENT']= False
+    app.secret_key = 'hhaahh'
     app.debug = True
-    # app.config["SESSION_PERMANENT"] = False
-    # app.config["SESSION_TYPE"] = "filesystem"
     # Session(app)
     # Serve the app with gevent
     http_server = WSGIServer(('0.0.0.0',5000),app)
