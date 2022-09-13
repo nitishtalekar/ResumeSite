@@ -9,7 +9,6 @@ import json
 
 # Flask utils
 from flask import Flask, redirect, url_for, request, render_template, session
-from flask_session import Session
 from werkzeug.utils import secure_filename
 from gevent.pywsgi import WSGIServer
 
@@ -85,9 +84,9 @@ def adminpage():
 if __name__ == '__main__':
     # app.run(port=5002, debug=True)
     app.debug = True
-    app.config["SESSION_PERMANENT"] = False
-    app.config["SESSION_TYPE"] = "filesystem"
-    Session(app)
+    # app.config["SESSION_PERMANENT"] = False
+    # app.config["SESSION_TYPE"] = "filesystem"
+    # Session(app)
     # Serve the app with gevent
     http_server = WSGIServer(('0.0.0.0',5000),app)
     http_server.serve_forever()
