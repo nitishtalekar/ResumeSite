@@ -6,7 +6,7 @@
         "desc": "Development of a P2P File distribution system for file transfers using TCP connection. Implementation of a central server for tracking files.",
         "link": "",
         "github": "https://github.com/nitishtalekar/CSC-573-InternetProtocols/tree/main/P2P-CI",
-        "img": "network",
+        "img": "proj/ml.png",
         "lang": "Python, Socket Programming",
         "srno": "8"
     },
@@ -17,7 +17,7 @@
         "desc": "Construction of a stacked model to predict rainfall for the next day based on wether station data. Implemented stacking of base models and feature reduction.",
         "link": "",
         "github": "https://github.ncsu.edu/uchhapr/engr-ALDA-fall2021-P27",
-        "img": "ml",
+        "img": "proj/ml.png",
         "lang": "Python, Sci-Kit learn, Tensorflow",
         "srno": "7"
     },
@@ -28,7 +28,7 @@
         "desc": "Implemented natural language processing techniques to translate simple Japanese sentences to English text. Construction of deep learning model using POS tagging.",
         "link": "",
         "github": "coffeecoders10/JapaneseEnglishTranslator: Japanese to English Translator (github.com)",
-        "img": "ml",
+        "img": "proj/ml.png",
         "lang": "Python, Sci-Kit learn, Tensorflow",
         "srno": "6"
     },
@@ -39,7 +39,7 @@
         "desc": "Comparison of predictive classification models on the basis of accuracy and efficiency for a given dataset using different classification techniques. Creation of web platform using Django.",
         "link": "http://coffeecoders.pythonanywhere.com/classifier/",
         "github": "coffeecoders10/ClassifierApplication: Application to generate classifiers (github.com)",
-        "img": "ml",
+        "img": "proj/ml.png",
         "lang": "Python, Django, Sci-Kit learn, Tensorflow",
         "srno": "5"
     },
@@ -50,7 +50,7 @@
         "desc": "Construction of a web-based feedback system for the Institute with analysis of feedback. Recording and Analysis of Students\\u2019 feedback on curriculum and teachers. The system is being used by the institution.",
         "link": "",
         "github": "coffeecoders10/FeedbackRGIT: RGIT Institute Feedback Form (github.com)",
-        "img": "web",
+        "img": "proj/web.png",
         "lang": "PHP, JavaScript, HTML, Ajax",
         "srno": "4"
     },
@@ -61,7 +61,7 @@
         "desc": "Determination of underlying disease in crops from image input using Image Processing, Neural Networks and Classification techniques. Creation of web platform for effective use.",
         "link": "",
         "github": "https://github.com/aayooush/CDDD",
-        "img": "ai",
+        "img": "proj/ai.png",
         "lang": "Python, Tensorflow, Keras",
         "srno": "3"
     },
@@ -72,7 +72,7 @@
         "desc": "Analysis of Results of students at the institute and providing detailed reports based on observations in data. Design of GUI and an executable file for office use. The system is being used by the institution.",
         "link": "",
         "github": "",
-        "img": "data",
+        "img": "proj/data.png",
         "lang": "Python, Pandas, Numpy, Tkinter",
         "srno": "2"
     },
@@ -83,7 +83,7 @@
         "desc": "Development of an algorithm to simulate human like thinking in the game of chess to play the best possible move using Decision tree and optimization techniques",
         "link": "",
         "github": "",
-        "img": "ml",
+        "img": "proj/ml.png",
         "lang": "Python, Tensorflow, Keras",
         "srno": "1"
     }

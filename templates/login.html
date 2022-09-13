@@ -21,7 +21,7 @@
 <!-- Page Loader -->
 
 <!-- Start Header -->
-{% include 'elements/header2.html' %} 
+{% include 'elements/header3.html' %} 
 <!-- End Header -->
 
 <!-- Start Cover -->
@@ -34,17 +34,29 @@
 <div class="">
   
 </div>
-<div class="container mt-5 pt-5">
+<div class="container-fluid d-flex justify-content-center align-items-center" style="min-height:100vh">
   <div class="row">
     <div class="col-12 d-flex justify-content-center mb-5">
-      <h1 class="text-light text-uppercase">ADMIN</h1>
+      <h1 class="text-light text-uppercase">Admin Login</h1>
     </div>
-  </div>
-  {% include 'admin/loads.html' %} 
-  
-  <hr class="bg-white mb-5">
-  {% include 'admin/admin_data.html' %} 
-      
+    <div class="col-12">
+      <form class="" action="" method="post">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center align-items-center mb-5">
+              <h4 class="text-uppercase text-center">Enter PASSWORD</h4>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center mb-5">
+              <input type="password" name="pwd" value="" style="width:75%">
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center">
+              <button style="" class="btn-submit" type="submit" name="login">Login</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>    
 </div>
 </body>
 </html>
