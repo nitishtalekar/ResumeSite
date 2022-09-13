@@ -83,7 +83,9 @@ def adminpage():
 
 if __name__ == '__main__':
     # app.run(port=5002, debug=True)
-    app.secret_key = 'NitishSecret'
+    app.config['SECRET_KEY'] = "somekey"
+    app.config['SESSION_TYPE'] = 'filesystem'
+    app.config['SESSION_PERMANENT']= False
     app.debug = True
     # app.config["SESSION_PERMANENT"] = False
     # app.config["SESSION_TYPE"] = "filesystem"
