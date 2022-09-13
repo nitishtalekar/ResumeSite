@@ -82,8 +82,8 @@ def adminpage():
         return render_template('admin.html',data = data, data_edit = data_edit)
 
 if __name__ == '__main__':
-    # app.run(port=5002, debug=True)
-    app.secret_key = 'hhaahh'
+    app = Flask(__name__)
+    app.secret_key = 'nitish503'
     app.debug = True
     # Session(app)
     # Serve the app with gevent
