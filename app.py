@@ -16,6 +16,7 @@ import data as info
 import loaddb as load
 
 app = Flask(__name__)
+app.secret_key = "nitish503"  
 
 print('Check http://127.0.0.1:5000/')
 
@@ -82,8 +83,6 @@ def adminpage():
         return render_template('admin.html',data = data, data_edit = data_edit)
 
 if __name__ == '__main__':
-    app = Flask(__name__)
-    app.config['SECRET_KEY'] = os.urandom(24)
     app.debug = True
     # Session(app)
     # Serve the app with gevent
